@@ -203,7 +203,8 @@ nav.scrolled {
 
 /* HERO SECTION: Large banner area at top of page */
 .hero {
-  min-height: 100vh;              /* At least full screen height */
+  min-height: 100vh;
+  height: auto;              /* At least full screen height */
   display: flex;                  /* Flexbox layout */
   align-items: center;            /* Vertically center content */
   position: relative;             /* For positioning background elements */
@@ -251,8 +252,8 @@ nav.scrolled {
 
 /* HERO CONTAINER: Main content area of hero section */
 .hero-container {
-  position: relative 1;            /* Above background layers */
-  z-index: 2;                   /* In front of background */
+  position: relative;            /* Above background layers */
+  z-index: 1;                   /* In front of background */
   max-width: 1400px;           /* Maximum width */
   margin: 0 auto;              /* Center on page */
   padding: 120px 50px 80px;    /* Top padding accounts for fixed navbar */
