@@ -1,47 +1,47 @@
 /* CSS VARIABLES: Define your color scheme once, use everywhere */
-        /* This makes it easy to change colors site-wide */
-        :root {
-            --primary-dark: #000033;    /* Dark navy blue - main brand color */
-            --primary-blue: #7EB6FF;    /* Light blue - accent color */
-            --gray-medium: #B0B7C0;     /* Medium gray - for secondary text */
-            --gray-light: #F5F5F5;      /* Light gray - for backgrounds */
-            --white: #FFFFFF;           /* Pure white */
-            /* GRADIENTS: Pre-defined color transitions for buttons/backgrounds */
-            --gradient-primary: linear-gradient(135deg, #7EB6FF 0%, #5A9FFF 100%);
-            --gradient-dark: linear-gradient(135deg, #000033 0%, #000055 100%);
-        }
+/* This makes it easy to change colors site-wide */
+:root {
+  --primary-dark: #000033;    /* Dark navy blue - main brand color */
+  --primary-blue: #7EB6FF;    /* Light blue - accent color */
+  --gray-medium: #B0B7C0;     /* Medium gray - for secondary text */
+  --gray-light: #F5F5F5;      /* Light gray - for backgrounds */
+  --white: #FFFFFF;           /* Pure white */
+  /* GRADIENTS: Pre-defined color transitions for buttons/backgrounds */
+  --gradient-primary: linear-gradient(135deg, #7EB6FF 0%, #5A9FFF 100%);
+  --gradient-dark: linear-gradient(135deg, #000033 0%, #000055 100%);
+}
 
-        /* GLOBAL RESET: Remove default browser styling for consistent look */
-        * {
-            margin: 0;           /* Remove default margins */
-            padding: 0;          /* Remove default padding */
-            box-sizing: border-box; /* Include padding/border in element width */
-        }
+/* GLOBAL RESET: Remove default browser styling for consistent look */
+* {
+  margin: 0;           /* Remove default margins */
+  padding: 0;          /* Remove default padding */
+  box-sizing: border-box; /* Include padding/border in element width */
+}
 
-        /* BODY STYLES: Base styling for the entire page */
-        body {
-            font-family: 'Poppins', sans-serif; /* Default font for all text */
-            color: var(--primary-dark);         /* Default text color */
-            overflow-x: hidden;                 /* Prevent horizontal scrollbar */
-            background: var(--white);           /* Page background color */
-        }
+/* BODY STYLES: Base styling for the entire page */
+body {
+  font-family: 'Poppins', sans-serif; /* Default font for all text */
+  color: var(--primary-dark);         /* Default text color */
+  overflow-x: hidden;                 /* Prevent horizontal scrollbar */
+  background: var(--white);           /* Page background color */
+}
 
-        /* HEADING STYLES: All headings use Montserrat font */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-        }
+/* HEADING STYLES: All headings use Montserrat font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
 
-        /* ANIMATED BACKGROUND: Fixed background layer with subtle animation */
-        .animated-bg {
-            position: fixed;    /* Stays in place when scrolling */
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -2;       /* Behind everything else */
-            background: var(--gray-light);
-            opacity: 0.5;      /* Semi-transparent */
-        }
+/* ANIMATED BACKGROUND: Fixed background layer with subtle animation */
+.animated-bg {
+  position: fixed;    /* Stays in place when scrolling */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;       /* Behind everything else */
+  background: var(--gray-light);
+  opacity: 0.5;      /* Semi-transparent */
+}
 
         /* FLOATING ELEMENTS: Decorative animated circles in background */
         .float-element {
