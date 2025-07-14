@@ -215,7 +215,7 @@ nav.scrolled {
   position: absolute;             /* Positioned behind content */
   top: 0; left: 0;
   width: 100%; height: 100%;
-  z-index: 0;                    /* Behind hero content */
+  z-index: -1;                    /* Behind hero content */
 }
 
 /* HERO VIDEO: Background video (currently hidden) */
@@ -251,7 +251,7 @@ nav.scrolled {
 
 /* HERO CONTAINER: Main content area of hero section */
 .hero-container {
-  position: relative;            /* Above background layers */
+  position: relative 1;            /* Above background layers */
   z-index: 2;                   /* In front of background */
   max-width: 1400px;           /* Maximum width */
   margin: 0 auto;              /* Center on page */
