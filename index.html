@@ -4,81 +4,420 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Owl Consulting</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+    <!-- ANIMATED BACKGROUND ELEMENTS: Decorative floating circles -->
+    <div class="animated-bg"></div>         <!-- Base background layer -->
+    <div class="float-element float-1"></div> <!-- Large floating circle -->
+    <div class="float-element float-2"></div> <!-- Medium floating circle -->
+    <div class="float-element float-3"></div> <!-- Small floating circle -->
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-image-bg" style="background-image: url('assets/images/hero-bg.png');">
-      <div class="hero-gradient-bg"></div>
-    </div>
-    <div class="hero-content">
-      <h1>Strategic Finance for Startups</h1>
-      <p>Flexible CFO support, founder-first consulting, and investor-ready materials.</p>
-      <a href="#contact" class="cta-button">Book a Free Consultation</a>
-    </div>
-  </section>
+    <!-- NAVIGATION BAR: Fixed header that stays at top -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <!-- LOGO: Company name and icon -->
+            <a href="#" class="logo">
+                <span class="logo-icon">🦉</span>
+                Owl Finance & Strategy Consulting
+            </a>
+            <!-- MAIN NAVIGATION MENU: Desktop menu (hidden on mobile) -->
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-cta">Get Started</a></li> <!-- Special CTA button -->
+            </ul>
+            <!-- MOBILE MENU TOGGLE: Hamburger menu for mobile (hidden on desktop) -->
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
 
-  <!-- SERVICES SECTION -->
-  <section class="services" id="services">
-    <div class="section-container">
+    <!-- HERO SECTION: Large banner area at top of page -->
+    <section class="hero">
+        <!-- HERO BACKGROUND: Video or image background -->
+        <div class="hero-video-container">
+            <!-- VIDEO OPTION: Background video (currently hidden) -->
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="your-video.mp4" type="video/mp4">
+            </video>
+            <!-- IMAGE OPTION: Background image -->
+            <div class="hero-image-bg" style="background-image: url('C:\Users\Owner\iCloudDrive\Money\Work\Owl Co\Images\Website Background.png');">
+                <!-- GRADIENT OVERLAY: Blue gradient over background -->
+                <div class="hero-gradient-bg"></div>
+            </div>
+            <!-- DARK OVERLAY: Improves text readability -->
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <!-- HERO CONTENT: Main content over background -->
+        <div class="hero-container">
+            <!-- LEFT SIDE: Text content and buttons -->
+            <div class="hero-content">
+                <!-- HERO TITLE: Main headline (split into two lines for animation) -->
+                <h1 class="hero-title">
+                    <span class="line-1">Gain a Finance and Strategy Professional</span>
+                    <span class="line-2">In <span class="gradient-text">Your Corner</span></span>
+                </h1>
+                <!-- HERO DESCRIPTION: Subtitle explaining value proposition -->
+                <p class="hero-description">
+                    Owl Finance & Strategy Consulting provides the actionable insights you need to succeed.
+                </p>
+                <!-- CALL-TO-ACTION BUTTONS: Primary and secondary actions -->
+                <div class="cta-container">
+                    <a href="#contact" class="cta-button cta-primary">
+                        <span class="cta-icon">🚀</span>
+                        Ready to Launch?
+                    </a>
+                    <a href="#services" class="cta-button cta-secondary">
+                        <span class="cta-icon">💼</span>
+                        Our Services
+                    </a>
+                </div>
+            </div>
+            <!-- RIGHT SIDE: Floating cards (hidden on mobile) -->
+            <div class="hero-visual">
+                <div class="hero-card-stack">
+                    <!-- FOUR FLOATING CARDS: Show different service areas -->
+                    <div class="hero-card card-1">
+                        <div class="card-icon">🦉</div>
+                        <h3>Partner in Growth</h3>
+                    </div>
+                    <div class="hero-card card-2">
+                        <div class="card-icon">📈</div>
+                        <h3>Financial Insights</h3>
+                    </div>
+                    <div class="hero-card card-3">
+                        <div class="card-icon">🧭</div>
+                        <h3>Strategy Guidance</h3>
+                    </div>
+                    <div class="hero-card card-4">
+                        <div class="card-icon">🤝</div>
+                        <h3>Investor Relations</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <!-- Fractional CFO -->
-      <div class="section-header">
-        <h2>Fractional CFO Packages</h2>
-        <p>Strategic finance, on demand. Choose Essentials, Growth, or Scale and tap a battle-tested CFO who plugs into your team, builds investor-grade models, and keeps you decision-ready—without the full-time payroll hit.</p>
+    <!-- SERVICES SECTION: Main content about service offerings -->
+    <section class="services" id="services">
+      <div class="section-container">
+
+        <!-- FRACTIONAL CFO SERVICES: First service category -->
+        <div class="section-header fade-in">
+          <h2>Fractional CFO Packages</h2>
+          <p>Three levels of embedded financial leadership—pick the depth that matches your stage and budget.</p>
+        </div>
+        <div class="services-grid cfo-grid">
+        
+          <!-- ESSENTIALS TIER: Basic CFO package -->
+          <div class="service-card fade-in">
+            <div class="service-icon">⚙️</div>                    <!-- Service icon -->
+            <h3>Essentials</h3>                                   <!-- Service name -->
+            <p>Lean support to set strong foundations—ideal for MVP through pre-seed.</p> <!-- Description -->
+            <ul class="service-features">                         <!-- Feature list -->
+              <li>12-week cash-flow model</li>
+              <li>Basic KPI dashboard (rev, burn, runway)</li>
+              <li>1× monthly check-in call</li>
+            </ul>
+            <a href="#contact" class="service-link">Let's talk →</a> <!-- CTA link -->
+          </div>
+
+          <!-- GROWTH TIER: Mid-level CFO package -->
+          <div class="service-card fade-in">
+            <div class="service-icon">🌱</div>
+            <h3>Growth</h3>
+            <p>Hands-on finance partner as you hire, raise, and accelerate.</p>
+            <ul class="service-features">
+              <li>3-statement model & scenario planning</li>
+              <li>Board-ready monthly reporting</li>
+              <li>2× monthly calls + async Slack</li>
+            </ul>
+            <a href="#contact" class="service-link">Let's talk →</a>
+          </div>
+
+          <!-- SCALE TIER: Premium CFO package -->
+          <div class="service-card fade-in">
+            <div class="service-icon">🚀</div>
+            <h3>Scale</h3>
+            <p>Virtual CFO on call—investor relations, strategic finance, and full forecasting suite.</p>
+            <ul class="service-features">
+              <li>Weekly leadership meeting</li>
+              <li>Fund-raise prep & data room</li>
+              <li>Custom KPI automation</li>
+            </ul>
+            <a href="#contact" class="service-link">Let's talk →</a>
+          </div>
+        </div>
+
+        <!-- CONSULTING & ADVISORY: Second service category -->
+        <div class="section-header fade-in" style="margin-top:120px">
+          <h2>Consulting Sprints & Advisory</h2>
+          <p>Targeted engagements and expert feedback when you need rapid progress or a critical eye.</p>
+        </div>
+
+        <div class="services-grid advisory-grid">
+          <!-- CONSULTING SPRINTS: Project-based work -->
+          <div class="service-card fade-in">
+            <div class="service-icon">📊</div>
+            <h3>Consulting Sprints</h3>
+            <p>Your go-to partner for targeted financial or strategic projects—clearing roadblocks so you can move forward faster.</p>
+            <ul class="service-features">
+              <li>Financial models</li>
+              <li>Market research</li>
+              <li>Company valuations</li>
+              <li>And much more!</li>
+            </ul>
+            <a href="#contact" class="service-link">See sprint ideas →</a>
+          </div>
+
+          <!-- ADVISORY: Ongoing strategic support -->
+          <div class="service-card fade-in">
+            <div class="service-icon">🎯</div>
+            <h3>Advisory</h3>
+            <p>Whether you're sketching your first MVP or steering a Series A company, you'll get an impartial partner who asks the hard questions and helps you make confident, faster decisions.</p>
+            <ul class="service-features">
+              <li>Light-touch strategic support</li>
+              <li>Investor material review</li>
+              <li>Optional board observer</li>
+              <li>Monthly check-in</li>
+            </ul>
+            <a href="#contact" class="service-link">Learn more →</a>
+          </div>
+
+          <!-- PITCH & POLISH: Presentation coaching -->
+          <div class="service-card fade-in">
+            <div class="service-icon">🗣️</div>
+            <h3>Pitch & Polish</h3>
+            <p>One-off or multi-session feedback to refine your deck and rehearse Q&A.</p>
+            <ul class="service-features">
+              <li>Receive actionable insights on your pitch deck</li>
+              <li>Prepare for investor questions</li>
+              <li>Engage your investors</li>
+              <li>Optional follow-up sessions</li>
+            </ul>
+            <a href="#contact" class="service-link">Book a session →</a>
+          </div>
+        </div>
+
       </div>
+    </section>
 
-      <div class="services-grid cfo-grid">
-        <div class="service-card">
-          <h3>Essentials</h3>
-          <ul>
-            <li>12-week cash-flow model</li>
-            <li>Basic KPI dashboard (rev, burn, runway)</li>
-            <li>1× monthly check-in call</li>
-          </ul>
+    <!-- BENEFITS SECTION: Why choose us -->
+    <section class="benefits" id="benefits">
+        <div class="section-container">
+            <!-- SECTION HEADER: Title and description -->
+            <div class="section-header fade-in">
+                <h2>Why Partner With Owl Finance & Strategy Consulting?</h2>
+                <p>Startup‑ready financial and strategic leadership—no full‑time overhead.</p>
+            </div>
+            <!-- BENEFITS GRID: List of numbered benefits -->
+            <div class="benefits-grid">
+                <!-- BENEFIT 1: Cost-effective expertise -->
+                <div class="benefit-card slide-in-left">
+                    <div class="benefit-number">01</div>              <!-- Large number -->
+                    <div class="benefit-content">
+                        <h3>C‑Suite-Level Expertise, Fractional Price</h3>
+                        <p>Get seasoned CFO insight without a six‑figure salary. Our model delivers top‑tier actionable insight on a startup budget.</p>
+                    </div>
+                </div>
+                <!-- BENEFIT 2: Stage-appropriate guidance -->
+                <div class="benefit-card slide-in-right">
+                    <div class="benefit-number">02</div>
+                    <div class="benefit-content">
+                        <h3>Stage‑Smart Guidance</h3>
+                        <p>We tailor playbooks to your goals—funding, runway, and KPIs—so advice always fits your stage.</p>
+                    </div>
+                </div>
+                <!-- BENEFIT 3: Data-driven decisions -->
+                <div class="benefit-card slide-in-left">
+                    <div class="benefit-number">03</div>
+                    <div class="benefit-content">
+                        <h3>Decisions Fueled by Data</h3>
+                        <p>Dashboards, forecasts, and scenario models replace guesswork with clarity, revealing the levers that move your metrics.</p>
+                    </div>
+                </div>
+                <!-- BENEFIT 4: Professional financials -->
+                <div class="benefit-card slide-in-right">
+                    <div class="benefit-number">04</div>
+                    <div class="benefit-content">
+                        <h3>Investor‑Grade Financials</h3>
+                        <p>We deliver crystal‑clear financials, compelling narratives, and board‑ready reporting that impresses investors.</p>
+                    </div>
+                </div>
+                <!-- BENEFIT 5: True partnership -->
+                <div class="benefit-card slide-in-left">
+                    <div class="benefit-number">05</div>
+                    <div class="benefit-content">
+                        <h3>Embedded Growth Partner</h3>
+                        <p>We plug into your management structure, anticipating roadblocks and co‑owning outcomes.</p>
+                    </div>
+                </div>
+                <!-- BENEFIT 6: Fast implementation -->
+                <div class="benefit-card slide-in-right">
+                    <div class="benefit-number">06</div>
+                    <div class="benefit-content">
+                        <h3>Frameworks That Ship Fast</h3>
+                        <p>Battle‑tested templates and automations go live in days, not months—because every week counts.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- BENEFITS CTA: Call-to-action after benefits -->
+            <div class="benefits-cta fade-in">
+                <h3>Ready to accelerate your growth with expert financial leadership?</h3>
+                <a href="#contact" class="cta-button cta-primary">
+                    <span class="cta-icon">💬</span>
+                    Schedule a Consultation
+                </a>
+            </div>
         </div>
-        <div class="service-card">
-          <h3>Growth</h3>
-          <ul>
-            <li>3-statement model & scenario planning</li>
-            <li>Board-ready monthly reporting</li>
-            <li>2× monthly calls + async Slack</li>
-          </ul>
-        </div>
-        <div class="service-card">
-          <h3>Scale</h3>
-          <ul>
-            <li>Weekly leadership meeting</li>
-            <li>Fund-raise prep & data room</li>
-            <li>Custom KPI automation</li>
-          </ul>
-        </div>
-      </div>
+    </section>
 
-      <!-- Consulting & Advisory -->
-      <div class="section-header" style="margin-top: 120px;">
-        <h2>Consulting Sprints & Advisory</h2>
-        <p>Targeted engagements and expert feedback when you need rapid progress or a critical eye.</p>
-      </div>
+    <!-- ABOUT SECTION: Company information and values -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <!-- LEFT SIDE: Text content -->
+            <div class="about-content slide-in-left">
+                <h2>Demystifying Finance for Ambitious Founders</h2>
+                <!-- COMPANY DESCRIPTION: Multiple paragraphs explaining the company -->
+                <p>
+                    At Owl Finance & Strategy Consulting, we understand that great ideas need great financial strategy to succeed. We bridge the gap between vision and execution by providing the financial expertise that transforms startups into scalable businesses.
+                </p>
+                <p>
+                    Our approach combines deep financial acumen with startup agility. We've walked in your shoes and understand the unique challenges of building something from nothing. That's why we don't just provide services – we become your strategic financial partner.
+                </p>
+                <p>
+                    Whether you're preparing for your first investor meeting or optimizing operations for scale, we bring the expertise, frameworks, and hands-on support needed to navigate each critical milestone with confidence.
+                </p>
+                <!-- COMPANY VALUES: List of core values -->
+                <div class="about-values">
+                    <div class="value-item">
+                        <div class="value-icon">🎯</div>         <!-- Value icon -->
+                        <div class="value-content">
+                            <h4>Strategic Focus</h4>            <!-- Value name -->
+                            <p>Every recommendation is aligned with your long-term vision and immediate goals.</p> <!-- Value description -->
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">📊</div>
+                        <div class="value-content">
+                            <h4>Data-Driven</h4>
+                            <p>We base decisions on solid financial analysis and market insights, not assumptions.</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">🤝</div>
+                        <div class="value-content">
+                            <h4>True Partnership</h4>
+                            <p>Your success is our success. We're invested in your journey from day one.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- RIGHT SIDE: Image/visual -->
+            <div class="about-visual slide-in-right">
+                <!-- DECORATIVE ELEMENTS: Floating circles around image -->
+                <div class="about-decoration decoration-1"></div>
+                <div class="about-decoration decoration-2"></div>
+                <!-- IMAGE CONTAINER: Holds professional image -->
+                <div class="about-image-container">
+                    <div class="about-image-placeholder">
+                        <!-- ACTUAL IMAGE: Hidden until image file is provided -->
+                        <img src="your-professional-image.jpg" alt="Financial Strategy Meeting" style="width: 100%; height: 100%; object-fit: cover;">
+                        <!-- PLACEHOLDER CONTENT: Shows when no image is provided -->
+                        <div class="image-placeholder-content">
+                            <span>📈</span>                    <!-- Large icon -->
+                            <p>Strategic Financial Leadership</p> <!-- Placeholder text -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="services-grid advisory-grid">
-        <div class="service-card">
-          <h3>Consulting Sprints</h3>
-          <p>2- to 4-week projects that unblock growth—models, market sizing, valuations, more.</p>
+    <!-- CONTACT SECTION: Contact form and information -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <!-- CONTACT HEADER: Section title and description -->
+            <div class="contact-header fade-in">
+                <h2>Ready to Transform Your Vision?</h2>
+                <p>Let's discuss how we can help you build, launch, and scale your startup with confidence.</p>
+            </div>
+            <!-- CONTACT GRID: Two-column layout -->
+            <div class="contact-grid">
+                <!-- LEFT SIDE: Contact information -->
+                <div class="contact-info slide-in-left">
+                    <!-- EMAIL CONTACT: Email address -->
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>      <!-- Email icon -->
+                        <div class="contact-details">
+                            <h3>Email Us</h3>                  <!-- Contact method -->
+                            <p>hello@owlfinancestrategy.com</p> <!-- Contact details -->
+                        </div>
+                    </div>
+                    <!-- PHONE CONTACT: Phone number -->
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <!-- ADDRESS CONTACT: Physical location -->
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Visit Us</h3>
+                            <p>123 Innovation Drive<br>Silicon Valley, CA 94025</p>
+                        </div>
+                    </div>
+                    <!-- HOURS CONTACT: Office hours -->
+                    <div class="contact-item">
+                        <div class="contact-icon">🕐</div>
+                        <div class="contact-details">
+                            <h3>Office Hours</h3>
+                            <p>Monday - Friday<br>9:00 AM - 6:00 PM PST</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- RIGHT SIDE: Contact form -->
+                <div class="contact-form slide-in-right">
+                    <!-- NAME FIELD: User's name -->
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    <!-- EMAIL FIELD: User's email -->
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                    <!-- MESSAGE FIELD: User's message -->
+                    <div class="form-group">
+                        <label for="message">Tell Us About Your Vision</label>
+                        <textarea id="message" name="message" placeholder="I have an idea for..." required></textarea>
+                    </div>
+                    <!-- SUBMIT BUTTON: Sends the form -->
+                    <button type="submit" class="form-submit">Send Message</button>
+                </div>
+            </div>
         </div>
-        <div class="service-card">
-          <h3>Advisory</h3>
-          <p>Light-touch, on-call strategic sounding board with monthly check-ins.</p>
-        </div>
-        <div class="service-card">
-          <h3>Pitch & Polish</h3>
-          <p>One-off or multi-session feedback to refine your deck and rehearse Q&A.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
+    <!-- FOOTER: Bottom section with copyright and social links -->
+    <footer>
+        <div class="footer-content">
+            <!-- COPYRIGHT: Company ownership -->
+            <p>&copy; 2024 Owl Finance & Strategy Consulting. Empowering entrepreneurs worldwide.</p>
+            <p>Transforming visions into successful ventures, one startup at a time.</p>
+            <!-- SOCIAL MEDIA LINKS: Icons for social platforms -->
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn">in</a>  <!-- LinkedIn -->
+                <a href="#" aria-label="Twitter">𝕏</a>     <!-- Twitter/X -->
+                <a href="#" aria-label="Email">@</a>      <!-- Email -->
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
