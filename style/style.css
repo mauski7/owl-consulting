@@ -1284,8 +1284,53 @@ footer {
         transform: translateX(0);
     }
 }
+
 /* ===== TRANSFORMATION SECTION STYLES ===== */
-/* Main container for the entire transformation storytelling section */
+/* 
+  IMPORTANT: 
+  Make sure your HTML uses the following structure and class names for the transformation section to apply styles:
+
+  <section class="transformation-section">
+    <div class="floating-shapes">
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+    <div class="section-header">
+      <h2>...</h2>
+      <p class="section-subtitle">...</p>
+    </div>
+    <div class="story-flow">
+      <div class="story-path"></div>
+      <div class="story-steps">
+        <div class="story-step step-1">
+          <div class="step-visual"><!-- ... --></div>
+          <div class="step-content"><!-- ... --></div>
+        </div>
+        <div class="story-step step-2">...</div>
+        <div class="story-step step-3">...</div>
+      </div>
+    </div>
+    <div class="story-bridge">
+      <div class="bridge-line"></div>
+      <span class="bridge-icon">→</span>
+      <span class="owl-mascot">🦉</span>
+      <div class="bridge-line"></div>
+    </div>
+    <div class="outcome-section">
+      <h3 class="outcome-title">...</h3>
+      <p class="outcome-text">...</p>
+      <a class="outcome-cta" href="#">...</a>
+    </div>
+    <div class="transformation-stats">
+      <div class="stat-card">
+        <span class="stat-number">...</span>
+        <span class="stat-label">...</span>
+      </div>
+      <!-- more stat-cards -->
+    </div>
+  </section>
+*/
 
 /* TRANSFORMATION SECTION: Primary section wrapper */
 /* Sets padding, background, and creates stacking context for floating elements */
@@ -1544,7 +1589,7 @@ footer {
 .step-description {
     color: var(--gray-medium);    /* Your medium gray color */
     font-size: 1.1rem;            /* Slightly larger than body text */
-    line-height: 1.7;             /* Generous line spacing for readability */
+    line-height: 1.7;             /* Generous line spacing */
     margin-bottom: 25px;          /* Space before emotion indicator */
 }
 
