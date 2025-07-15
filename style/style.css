@@ -305,6 +305,7 @@ nav.scrolled {
 /* GRADIENT TEXT: Special effect for highlighted words */
 .gradient-text {
     background: linear-gradient(to right, var(--primary-blue), #ffffff);
+    background-clip: text;             /* Standard property for compatibility */
     -webkit-background-clip: text;      /* Clips background to text */
     -webkit-text-fill-color: transparent; /* Makes text transparent to show background */
     animation: gradientShift 4s ease infinite; /* Animated gradient */
@@ -740,6 +741,7 @@ nav.scrolled {
     font-size: 3rem;             /* Large size */
     font-weight: 800;            /* Extra bold */
     background: var(--gradient-primary); /* Blue gradient */
+    background-clip: text;               /* Standard property for compatibility */
     -webkit-background-clip: text;        /* Clips background to text */
     -webkit-text-fill-color: transparent; /* Makes text transparent */
     opacity: 0.8;                /* Slightly transparent */
@@ -1280,5 +1282,515 @@ footer {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+/* ===== TRANSFORMATION SECTION STYLES ===== */
+/* Main container for the entire transformation storytelling section */
+
+/* TRANSFORMATION SECTION: Primary section wrapper */
+/* Sets padding, background, and creates stacking context for floating elements */
+.transformation-section {
+    padding: 100px 50px;          /* Large padding: 100px top/bottom, 50px left/right */
+    background: var(--white);     /* Uses your white color variable */
+    position: relative;           /* Creates positioning context for floating shapes */
+    overflow: hidden;             /* Hides floating shapes that extend beyond boundaries */
+}
+
+/* ===== FLOATING BACKGROUND DECORATIONS ===== */
+/* Subtle animated background elements that add visual interest */
+
+/* FLOATING SHAPES CONTAINER: Holds all decorative background elements */
+/* Positioned absolutely to cover entire section without affecting content layout */
+.floating-shapes {
+    position: absolute;           /* Positioned relative to transformation-section */
+    top: 0; left: 0; right: 0; bottom: 0;  /* Covers entire section area */
+    pointer-events: none;         /* Can't be clicked - purely decorative */
+    overflow: hidden;             /* Hides parts of shapes that extend outside */
+}
+
+/* INDIVIDUAL FLOATING SHAPE: Base styles for decorative circles */
+/* Creates large, blurred, semi-transparent circles that gently move */
+.floating-shapes .shape {
+    position: absolute;           /* Allows precise positioning */
+    border-radius: 50%;           /* Makes perfect circles */
+    opacity: 0.05;                /* Very transparent - subtle effect */
+    filter: blur(100px);          /* Heavy blur creates soft glow effect */
+    animation: float 20s ease-in-out infinite;  /* Continuous gentle movement */
+}
+
+/* SHAPE 1: Top-left floating element */
+/* Large circle positioned in upper-left area */
+.floating-shapes .shape:nth-child(1) {
+    width: 400px; height: 400px;  /* Large size */
+    top: 10%; left: 10%;          /* Positioned in top-left quadrant */
+    background: var(--gradient-primary);  /* Uses your blue gradient */
+    animation-delay: 0s;          /* Starts immediately */
+}
+
+/* SHAPE 2: Bottom-right floating element */
+/* Medium circle positioned in lower-right area */
+.floating-shapes .shape:nth-child(2) {
+    width: 300px; height: 300px;  /* Medium size */
+    top: 60%; right: 15%;         /* Positioned in bottom-right area */
+    background: var(--gradient-dark);     /* Uses your dark gradient */
+    animation-delay: 10s;         /* Starts after 10 seconds */
+}
+
+/* SHAPE 3: Center-left floating element */
+/* Medium-large circle positioned on left side */
+.floating-shapes .shape:nth-child(3) {
+    width: 350px; height: 350px;  /* Medium-large size */
+    bottom: 20%; left: 30%;       /* Positioned in lower-left area */
+    background: var(--gradient-primary);  /* Uses your blue gradient */
+    animation-delay: 15s;         /* Starts after 15 seconds */
+}
+
+/* ===== SECTION HEADER STYLES ===== */
+/* Title and subtitle area - follows your existing design patterns */
+
+/* SECTION SUBTITLE: Descriptive text under main title */
+/* Extends your existing section header pattern with subtitle styling */
+.section-subtitle {
+    font-size: 1.2rem;            /* Slightly larger than body text */
+    color: var(--gray-medium);    /* Uses your medium gray variable */
+    max-width: 700px;             /* Limits line length for readability */
+    margin: 0 auto;               /* Centers the text */
+}
+
+/* ===== STORY FLOW LAYOUT ===== */
+/* Container and connecting elements for the three-step narrative */
+
+/* STORY FLOW: Main container for the narrative progression */
+/* Creates positioning context for the connecting line */
+.story-flow {
+    position: relative;           /* Allows absolute positioning of story-path */
+}
+
+/* STORY PATH: Horizontal line connecting all three steps */
+/* Visual element that shows progression and connection between steps */
+.story-path {
+    position: absolute;           /* Positioned relative to story-flow */
+    top: 50%;                     /* Vertically centered */
+    left: 0; right: 0;            /* Spans full width */
+    height: 4px;                  /* Thin line */
+    background: var(--gradient-primary);  /* Uses your blue gradient */
+    transform: translateY(-50%);  /* Perfect vertical centering */
+    border-radius: 2px;           /* Slightly rounded ends */
+    z-index: 1;                   /* Behind story steps but above background */
+    opacity: 0.3;                 /* Semi-transparent - subtle effect */
+}
+
+/* STORY STEPS: Grid container for the three transformation steps */
+/* Creates responsive layout that adapts to different screen sizes */
+.story-steps {
+    display: grid;                /* CSS Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));  /* Responsive columns */
+    gap: 80px;                    /* Space between steps */
+    position: relative;           /* Above the connecting line */
+    z-index: 2;                   /* Above story-path */
+    margin-top: 60px;             /* Space below section header */
+}
+
+/* ===== INDIVIDUAL STORY STEP STYLES ===== */
+/* Styling for each of the three transformation steps */
+
+/* STORY STEP: Container for each transformation phase */
+/* Centers content and creates positioning context for floating icons */
+.story-step {
+    text-align: center;           /* Centers all content */
+    position: relative;           /* For absolutely positioned step-icon */
+}
+
+/* STEP VISUAL: Circular container for step images */
+/* Creates the prominent circular image area with hover effects */
+.step-visual {
+    width: 320px; height: 320px;  /* Large square that becomes circle */
+    margin: 0 auto 40px;          /* Centers horizontally, adds bottom margin */
+    border-radius: 20px;          /* Rounded corners (not full circle) */
+    position: relative;           /* For absolutely positioned overlay and icon */
+    overflow: hidden;             /* Crops image to container shape */
+    box-shadow: 0 10px 40px rgba(0, 0, 51, 0.08);  /* Subtle shadow */
+    border: 1px solid rgba(126, 182, 255, 0.2);    /* Light blue border */
+    transition: all 0.4s ease;    /* Smooth hover animations */
+}
+
+/* STEP VISUAL HOVER: Elevates and enhances shadow on hover */
+/* Creates engaging interaction when user hovers over images */
+.story-step:hover .step-visual {
+    transform: translateY(-10px); /* Moves up 10px */
+    box-shadow: 0 20px 60px rgba(0, 0, 51, 0.15);  /* Stronger shadow */
+}
+
+/* STEP VISUAL OVERLAY: Colored overlay on top of images */
+/* Creates consistent color theming for each step */
+.step-visual::before {
+    content: '';                  /* Empty content for overlay effect */
+    position: absolute;           /* Covers entire visual area */
+    top: 0; left: 0; right: 0; bottom: 0;  /* Full coverage */
+    border-radius: 20px;          /* Matches container shape */
+    z-index: 1;                   /* Above image, below icon */
+}
+
+/* STEP 1 OVERLAY: Gray overlay for problem/struggle phase */
+/* Uses gray tones to represent difficulty and confusion */
+.step-1 .step-visual::before {
+    background: linear-gradient(135deg, 
+        rgba(176, 183, 192, 0.3) 0%,     /* Light gray - 30% opacity */
+        rgba(176, 183, 192, 0.5) 50%,    /* Medium gray - 50% opacity */
+        rgba(176, 183, 192, 0.7) 100%);  /* Darker gray - 70% opacity */
+}
+
+/* STEP 2 OVERLAY: Blue overlay for solution/partnership phase */
+/* Uses your brand blue to represent positive intervention */
+.step-2 .step-visual::before {
+    background: linear-gradient(135deg, 
+        rgba(126, 182, 255, 0.3) 0%,     /* Light blue - 30% opacity */
+        rgba(90, 159, 255, 0.5) 50%,     /* Medium blue - 50% opacity */
+        rgba(126, 182, 255, 0.7) 100%);  /* Darker blue - 70% opacity */
+}
+
+/* STEP 3 OVERLAY: Dark blue overlay for success/mastery phase */
+/* Uses dark blue to represent professional success and confidence */
+.step-3 .step-visual::before {
+    background: linear-gradient(135deg, 
+        rgba(0, 0, 51, 0.3) 0%,          /* Light dark blue - 30% opacity */
+        rgba(0, 0, 85, 0.5) 50%,         /* Medium dark blue - 50% opacity */
+        rgba(0, 0, 51, 0.7) 100%);       /* Darker blue - 70% opacity */
+}
+
+/* VISUAL CONTENT: Container for actual images */
+/* Creates frosted glass effect and positions images properly */
+.visual-content {
+    position: relative;           /* Above overlay */
+    z-index: 2;                   /* Above overlay, below icon */
+    height: 100%;                 /* Full height of container */
+    display: flex;                /* Flexbox for centering */
+    align-items: center;          /* Vertically center content */
+    justify-content: center;      /* Horizontally center content */
+    color: var(--primary-dark);   /* Dark text color */
+    font-size: 1rem;              /* Standard text size */
+    text-align: center;           /* Center text */
+    padding: 20px;                /* Internal spacing */
+    font-style: italic;           /* Italic placeholder text */
+    background: rgba(255, 255, 255, 0.8);  /* Semi-transparent white background */
+    border-radius: 15px;          /* Rounded corners */
+    margin: 20px;                 /* Margin from edges */
+    backdrop-filter: blur(10px);  /* Blurs background for frosted glass effect */
+    font-weight: 500;             /* Medium font weight */
+}
+
+/* ===== STEP ICONS ===== */
+/* Floating emoji icons above each step image */
+
+/* STEP ICON: Circular container for emoji indicators */
+/* Floats above each image to show emotional state */
+.step-icon {
+    position: absolute;           /* Positioned relative to step-visual */
+    top: -20px;                   /* Floats 20px above image */
+    left: 50%;                    /* Horizontally centered */
+    transform: translateX(-50%);  /* Perfect horizontal centering */
+    width: 60px; height: 60px;    /* Perfect circle size */
+    border-radius: 50%;           /* Makes perfect circle */
+    display: flex;                /* Flexbox for centering emoji */
+    align-items: center;          /* Vertically center emoji */
+    justify-content: center;      /* Horizontally center emoji */
+    font-size: 2rem;              /* Large emoji */
+    color: var(--white);          /* White emoji color */
+    z-index: 3;                   /* Above everything else */
+    box-shadow: 0 5px 20px rgba(0, 0, 51, 0.2);  /* Subtle shadow */
+}
+
+/* STEP 1 ICON: Dark background for problem phase */
+/* Uses dark gradient to represent serious/difficult state */
+.step-1 .step-icon {
+    background: var(--gradient-dark);  /* Your dark gradient variable */
+}
+
+/* STEP 2 ICON: Blue background for solution phase */
+/* Uses your brand color to represent positive intervention */
+.step-2 .step-icon {
+    background: var(--gradient-primary);  /* Your blue gradient variable */
+}
+
+/* STEP 3 ICON: Dark background for success phase */
+/* Uses dark gradient to represent professional achievement */
+.step-3 .step-icon {
+    background: var(--gradient-dark);  /* Your dark gradient variable */
+}
+
+/* ===== STEP CONTENT STYLES ===== */
+/* Text content below each step image */
+
+/* STEP CONTENT: Container for text content */
+/* Limits width and centers content for optimal readability */
+.step-content {
+    max-width: 300px;             /* Limits line length */
+    margin: 0 auto;               /* Centers content */
+}
+
+/* STEP TITLE: Main heading for each step */
+/* Uses your heading font and follows your typography scale */
+.step-title {
+    font-family: 'Montserrat', sans-serif;  /* Your heading font */
+    font-size: 1.75rem;           /* Large heading size */
+    font-weight: 700;             /* Bold weight */
+    color: var(--primary-dark);   /* Your dark color */
+    margin-bottom: 20px;          /* Space before description */
+    line-height: 1.3;             /* Tight line height for headings */
+}
+
+/* STEP DESCRIPTION: Explanatory paragraph for each step */
+/* Body text that explains what happens in each phase */
+.step-description {
+    color: var(--gray-medium);    /* Your medium gray color */
+    font-size: 1.1rem;            /* Slightly larger than body text */
+    line-height: 1.7;             /* Generous line spacing for readability */
+    margin-bottom: 25px;          /* Space before emotion indicator */
+}
+
+/* STEP EMOTION: Emotional state indicator */
+/* Small badge showing how founder feels in each phase */
+.step-emotion {
+    display: inline-block;        /* Allows padding and centering */
+    padding: 10px 20px;           /* Internal spacing */
+    background: rgba(126, 182, 255, 0.1);  /* Very light blue background */
+    border: 1px solid rgba(126, 182, 255, 0.3);  /* Light blue border */
+    border-radius: 25px;          /* Pill shape */
+    font-size: 0.95rem;           /* Slightly smaller text */
+    font-weight: 600;             /* Semi-bold */
+    color: var(--primary-dark);   /* Dark text */
+}
+
+/* ===== STORY BRIDGE CONNECTORS ===== */
+/* Visual elements that connect the steps together */
+
+/* STORY BRIDGE: Container for connecting elements between steps */
+/* Shows progression and transition between phases */
+.story-bridge {
+    display: flex;                /* Horizontal layout */
+    align-items: center;          /* Vertically center items */
+    justify-content: center;      /* Horizontally center items */
+    margin: 60px 0;               /* Vertical spacing above and below */
+    position: relative;           /* For any absolute positioning needs */
+}
+
+/* BRIDGE LINE: Horizontal lines connecting steps */
+/* Visual connectors that show progression */
+.bridge-line {
+    height: 2px;                  /* Thin line */
+    background: var(--gradient-primary);  /* Your blue gradient */
+    flex: 1;                      /* Expands to fill available space */
+    max-width: 150px;             /* Maximum width limit */
+    border-radius: 2px;           /* Slightly rounded */
+    opacity: 0.5;                 /* Semi-transparent */
+}
+
+/* BRIDGE ICON: Arrow between steps */
+/* Shows direction of progression */
+.bridge-icon {
+    margin: 0 30px;               /* Space on both sides */
+    font-size: 2rem;              /* Large arrow */
+    color: var(--primary-blue);   /* Your blue color */
+}
+
+/* OWL MASCOT: Your brand mascot in the connector */
+/* Includes your signature blinking animation */
+.owl-mascot {
+    font-size: 3rem;              /* Large owl emoji */
+    margin: 0 20px;               /* Space on both sides */
+    animation: blink 4s infinite; /* Your existing blink animation */
+}
+
+/* ===== OUTCOME SECTION ===== */
+/* Final call-to-action area */
+
+/* OUTCOME SECTION: Dark background CTA area */
+/* Final section encouraging action with rotating background effect */
+.outcome-section {
+    margin-top: 100px;            /* Large space from stats section */
+    padding: 60px;                /* Internal spacing */
+    background: var(--gradient-dark);     /* Your dark gradient */
+    border-radius: 20px;          /* Rounded corners */
+    color: var(--white);          /* White text */
+    text-align: center;           /* Center all content */
+    position: relative;           /* For rotating background effect */
+    overflow: hidden;             /* Hides rotating background overflow */
+}
+
+/* OUTCOME SECTION ROTATING BACKGROUND: Animated decoration */
+/* Creates subtle moving effect in background */
+.outcome-section::before {
+    content: '';                  /* Empty content for effect */
+    position: absolute;           /* Positioned relative to outcome-section */
+    top: -50%; left: -50%;        /* Extends beyond section boundaries */
+    width: 200%; height: 200%;    /* Twice the size for rotation effect */
+    background: radial-gradient(circle, rgba(126, 182, 255, 0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;  /* Continuous rotation */
+}
+
+/* OUTCOME TITLE: Main CTA heading */
+/* Large, bold heading that grabs attention */
+.outcome-title {
+    font-family: 'Montserrat', sans-serif;  /* Your heading font */
+    font-size: 2.5rem;            /* Large heading */
+    font-weight: 700;             /* Bold weight */
+    margin-bottom: 25px;          /* Space before text */
+    position: relative;           /* Above rotating background */
+    z-index: 2;                   /* Above background effect */
+}
+
+/* OUTCOME TEXT: Supporting CTA text */
+/* Builds urgency and describes benefits */
+.outcome-text {
+    font-size: 1.2rem;            /* Larger than body text */
+    color: rgba(255, 255, 255, 0.9);  /* Slightly transparent white */
+    line-height: 1.7;             /* Generous line spacing */
+    max-width: 600px;             /* Limits line length */
+    margin: 0 auto 35px;          /* Centers and adds bottom margin */
+    position: relative;           /* Above rotating background */
+    z-index: 2;                   /* Above background effect */
+}
+
+/* OUTCOME CTA: Main action button */
+/* Prominent button that matches your site's button styles */
+.outcome-cta {
+    display: inline-block;        /* Allows padding and centering */
+    padding: 18px 40px;           /* Button padding */
+    background: var(--gradient-primary);  /* Your blue gradient */
+    color: var(--white);          /* White text */
+    text-decoration: none;        /* No underline */
+    border-radius: 50px;          /* Pill shape */
+    font-weight: 600;             /* Semi-bold */
+    font-size: 1.1rem;            /* Slightly larger text */
+    transition: all 0.3s ease;    /* Smooth hover effects */
+    box-shadow: 0 10px 30px rgba(126, 182, 255, 0.3);  /* Glowing shadow */
+    position: relative;           /* Above rotating background */
+    z-index: 2;                   /* Above background effect */
+}
+
+/* OUTCOME CTA HOVER: Button hover effects */
+/* Elevates button and enhances glow on hover */
+.outcome-cta:hover {
+    transform: translateY(-3px);  /* Moves up slightly */
+    box-shadow: 0 15px 40px rgba(126, 182, 255, 0.5);  /* Stronger glow */
+}
+
+/* ===== TRANSFORMATION STATS ===== */
+/* Quantified results section with metric cards */
+
+/* TRANSFORMATION STATS: Grid container for statistics */
+/* Shows quantified benefits using card layout */
+.transformation-stats {
+    margin-top: 80px;             /* Space from story steps */
+    display: grid;                /* CSS Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /* Responsive columns */
+    gap: 40px;                    /* Space between cards */
+}
+
+/* STAT CARD: Individual statistic card */
+/* Follows your existing card design pattern */
+.stat-card {
+    background: var(--white);     /* White background */
+    padding: 40px 30px;           /* Internal spacing */
+    border-radius: 20px;          /* Rounded corners */
+    text-align: center;           /* Center content */
+    box-shadow: 0 10px 40px rgba(0, 0, 51, 0.08);  /* Subtle shadow */
+    transition: all 0.4s ease;    /* Smooth hover effects */
+    position: relative;           /* For top border effect */
+    overflow: hidden;             /* Hides sliding border overflow */
+}
+
+/* STAT CARD TOP BORDER: Sliding blue border effect */
+/* Matches your existing card hover pattern */
+.stat-card::before {
+    content: '';                  /* Empty content for effect */
+    position: absolute;           /* Positioned relative to card */
+    top: 0; left: 0;              /* Top-left corner */
+    width: 100%; height: 5px;     /* Full width, thin height */
+    background: var(--gradient-primary);  /* Your blue gradient */
+    transform: translateX(-100%); /* Starts off-screen left */
+    transition: transform 0.4s ease;      /* Smooth sliding animation */
+}
+
+/* STAT CARD HOVER: Elevation and border animation */
+/* Creates engaging hover interaction */
+.stat-card:hover {
+    transform: translateY(-10px); /* Moves up */
+    box-shadow: 0 20px 60px rgba(0, 0, 51, 0.15);  /* Stronger shadow */
+}
+
+.stat-card:hover::before {
+    transform: translateX(0);     /* Border slides in from left */
+}
+
+/* STAT NUMBER: Large metric number */
+/* Eye-catching number with gradient text effect */
+.stat-number {
+    font-family: 'Montserrat', sans-serif;  /* Your heading font */
+    font-size: 2.5rem;            /* Large number */
+    font-weight: 800;             /* Extra bold */
+    background: var(--gradient-primary);    /* Your blue gradient */
+    background-clip: text;                  /* Standard property for compatibility */
+    -webkit-background-clip: text;           /* Clips gradient to text */
+    -webkit-text-fill-color: transparent;   /* Makes text transparent to show gradient */
+    display: block;               /* Full width */
+    margin-bottom: 10px;          /* Space before label */
+}
+
+/* STAT LABEL: Description of what the number represents */
+/* Clear, readable text explaining the metric */
+.stat-label {
+    color: var(--gray-medium);    /* Your medium gray */
+    font-size: 1rem;              /* Standard text size */
+    font-weight: 500;             /* Medium weight */
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Mobile and tablet adaptations */
+
+/* MOBILE STYLES: Tablet and phone layouts */
+/* Adjusts layout for smaller screens */
+@media (max-width: 768px) {
+    /* SECTION SPACING: Tighter spacing on mobile */
+    .transformation-section {
+        padding: 100px 20px;       /* Reduced horizontal padding */
+    }
+    
+    /* STORY LAYOUT: Single column on mobile */
+    .story-steps {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 60px;                  /* Reduced gap between steps */
+    }
+    
+    /* STEP VISUAL: Smaller images on mobile */
+    .step-visual {
+        width: 280px; height: 280px; /* Smaller dimensions */
+    }
+    
+    /* STORY BRIDGE: Vertical layout on mobile */
+    .story-bridge {
+        flex-direction: column;     /* Stack vertically */
+        gap: 20px;                  /* Space between elements */
+    }
+    
+    /* BRIDGE LINE: Vertical orientation on mobile */
+    .bridge-line {
+        width: 2px; height: 50px;   /* Thin vertical line */
+        max-width: none;            /* Remove width restriction */
+    }
+    
+    /* OUTCOME SECTION: Tighter spacing on mobile */
+    .outcome-section {
+        padding: 40px 30px;        /* Reduced padding */
+    }
+    
+    /* OUTCOME TITLE: Smaller heading on mobile */
+    .outcome-title {
+        font-size: 2rem;           /* Smaller heading */
+    }
+
+    /* STATS GRID: Two columns on mobile */
+    .transformation-stats {
+        grid-template-columns: repeat(2, 1fr);  /* Two equal columns */
     }
 }
