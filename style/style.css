@@ -1411,7 +1411,7 @@ footer {
     position: relative;           /* For absolutely positioned overlay and icon */
     overflow: hidden;             /* Crops image to container shape */
     box-shadow: 0 10px 40px rgba(0, 0, 51, 0.08);  /* Subtle shadow */
-    border: 1px solid rgba(126, 182, 255, 0.2);    /* Light blue border */
+    /*border: 1px solid rgba(126, 182, 255, 0.2);*/    /* Light blue border */
     transition: all 0.4s ease;    /* Smooth hover animations */
 }
 
