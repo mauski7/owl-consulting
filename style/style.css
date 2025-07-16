@@ -20,12 +20,33 @@
 }
 
 /* ===== BODY STYLES ===== */
-/* Base styling for the entire page */
+/* Base styling for the entire page with feathered dark background */
 body {
     font-family: 'Poppins', sans-serif; /* Default font for all text */
     color: var(--primary-dark);         /* Default text color */
     overflow-x: hidden;                 /* Prevent horizontal scrollbar */
-    background: var(--white);           /* Page background color */
+    background: var(--primary-dark);    /* CHANGED: Dark background instead of white */
+    position: relative;                 /* For feathered overlay positioning */
+}
+
+/* FEATHERED TEXTURE OVERLAY: Subtle feather pattern across entire site */
+body::before {
+    content: '';
+    position: fixed;              /* Covers entire viewport */
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: 
+        /* Multiple gradient layers to create feather-like texture */
+        radial-gradient(ellipse 200px 60px at 20% 30%, rgba(126, 182, 255, 0.03) 0%, transparent 70%),
+        radial-gradient(ellipse 150px 40px at 70% 60%, rgba(126, 182, 255, 0.02) 0%, transparent 70%),
+        radial-gradient(ellipse 300px 80px at 40% 80%, rgba(126, 182, 255, 0.025) 0%, transparent 70%),
+        radial-gradient(ellipse 180px 50px at 85% 20%, rgba(126, 182, 255, 0.02) 0%, transparent 70%),
+        radial-gradient(ellipse 220px 70px at 60% 40%, rgba(126, 182, 255, 0.015) 0%, transparent 70%),
+        /* Base dark background with subtle gradient */
+        linear-gradient(135deg, #000033 0%, #000044 100%);
+    opacity: 0.7;                 /* Subtle opacity */
+    pointer-events: none;         /* Can't be clicked */
+    z-index: -3;                  /* Behind everything */
 }
 
 /* ===== HEADING STYLES ===== */
@@ -48,42 +69,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ===== FLOATING ELEMENTS ===== */
-/* Decorative animated circles in background */
+/* Decorative animated feather-like shapes in background */
 .float-element {
     position: fixed;                        /* Fixed position relative to viewport */
-    border-radius: 50%;                     /* Perfect circle */
+    border-radius: 50% 10% 50% 10%;        /* CHANGED: Feather-like shape */
     background: var(--primary-blue);       /* Blue color */
-    opacity: 0.1;                          /* Very transparent */
-    filter: blur(100px);                   /* Soft, blurred effect */
-    animation: float 20s infinite ease-in-out; /* Continuous floating animation */
+    opacity: 0.08;                         /* CHANGED: More subtle */
+    filter: blur(80px);                    /* CHANGED: Softer blur for feather effect */
+    animation: floatFeather 25s infinite ease-in-out; /* CHANGED: New feather animation */
     pointer-events: none;                  /* Can't be clicked */
-    z-index: -1;                          /* Behind content */
+    z-index: -2;                          /* Behind content */
 }
 
-/* THREE FLOATING ELEMENTS: Different sizes and positions */
-.float-1 {
-    width: 600px; height: 600px;
-    top: -300px; left: -300px;  /* Positioned off top-left */
-    animation-delay: 0s;         /* Starts immediately */
-}
-
-.float-2 {
-    width: 400px; height: 400px;
-    bottom: -200px; right: -200px; /* Positioned off bottom-right */
-    animation-delay: 7s;            /* Starts after 7 seconds */
-}
-
-.float-3 {
-    width: 300px; height: 300px;
-    top: 50%; left: 70%;           /* Center-right of screen */
-    animation-delay: 14s;          /* Starts after 14 seconds */
-}
-
-/* FLOATING ANIMATION: Creates gentle movement */
-@keyframes float {
-    0%, 100% { transform: translate(0, 0) rotate(0deg); }      /* Starting position */
-    33% { transform: translate(100px, -100px) rotate(120deg); } /* Move up-right, rotate */
-    66% { transform: translate(-100px, 100px) rotate(240deg); } /* Move down-left, rotate more */
+/* ENHANCED FEATHER ELEMENTS: Additional feather texture within floating elements */
+.float-element::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+    background: rgba(126, 182, 255, 0.1);
+    border-radius: 60% 20% 60% 20%;        /* Inner feather shape */
+    transform: rotate(45deg);
+    filter: blur(40px);
 }
 
 /* ===== NAVIGATION BAR ===== */
@@ -481,20 +490,27 @@ nav.scrolled {
 .card-3 { animation: floatCard3 6s ease-in-out infinite; animation-delay: 0s; }
 .card-4 { animation: floatCard1 6s ease-in-out infinite; animation-delay: 0s; }
 
-/* FLOATING ANIMATIONS: Different patterns for each card */
-@keyframes floatCard1 {
-    0%, 100% { transform: translateY(0); }   /* Normal position */
-    50% { transform: translateY(-10px); }    /* Floats up */
+/* FLOATING ANIMATION: Creates gentle movement */
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }      /* Starting position */
+    33% { transform: translate(100px, -100px) rotate(120deg); } /* Move up-right, rotate */
+    66% { transform: translate(-100px, 100px) rotate(240deg); } /* Move down-left, rotate more */
 }
 
-@keyframes floatCard2 {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }     /* Different height */
-}
-
-@keyframes floatCard3 {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }    /* Different height */
+/* FEATHER FLOATING ANIMATION: More organic, feather-like movement */
+@keyframes floatFeather {
+    0%, 100% { 
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    25% { 
+        transform: translate(50px, -80px) rotate(15deg) scale(1.1);
+    }
+    50% { 
+        transform: translate(-30px, -50px) rotate(-10deg) scale(0.9);
+    }
+    75% { 
+        transform: translate(80px, 60px) rotate(25deg) scale(1.05);
+    }
 }
 
 /* CARD ICON: Large emoji icon in each card */
@@ -518,11 +534,12 @@ nav.scrolled {
     line-height: 1.5;
 }
 
-/* ===== SERVICES SECTION ===== */
-/* Main content area about services */
+/* SERVICES SECTION: Main content area about services */
 .services {
     padding: 100px 50px;          /* Large padding for breathing room */
-    background: var(--white);     /* White background */
+    background: rgba(255, 255, 255, 0.98);  /* CHANGED: Slightly transparent white over dark */
+    position: relative;           /* For feather accent positioning */
+    z-index: 1;                   /* Above dark background */
 }
 
 /* SECTION CONTAINER: Centers content with max width */
@@ -685,7 +702,7 @@ nav.scrolled {
 /* Why choose us section */
 .benefits {
     padding: 100px 50px;
-    background: var(--gray-light); /* Light gray background */
+    background: rgba(245, 245, 245, 0.95);  /* CHANGED: Transparent light background */
     position: relative;           /* For decorative elements */
     overflow: hidden;             /* Hides overflow effects */
 }
@@ -817,7 +834,7 @@ nav.scrolled {
 /* Company information */
 .about {
     padding: 100px 50px;
-    background: var(--gray-light);
+    background: rgba(245, 245, 245, 0.95);  /* CHANGED: Transparent light background */
     position: relative;
     overflow: hidden;
 }
@@ -1637,4 +1654,35 @@ footer {
     .cta-title {
         font-size: 2rem;           /* Reduced CTA heading size */
     }
+}
+
+/* ===== FEATHERED SECTION ACCENTS ===== */
+/* Subtle feather patterns within white sections */
+
+/* SECTION FEATHER ACCENTS: Subtle feather patterns within sections */
+.services::before,
+.transformation-section::before,
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: 
+        radial-gradient(ellipse 400px 100px at 80% 20%, rgba(126, 182, 255, 0.02) 0%, transparent 60%),
+        radial-gradient(ellipse 300px 80px at 20% 80%, rgba(126, 182, 255, 0.015) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* CONTACT SECTION: Add feather accents to dark contact section */
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: 
+        radial-gradient(ellipse 500px 120px at 30% 30%, rgba(126, 182, 255, 0.05) 0%, transparent 70%),
+        radial-gradient(ellipse 350px 90px at 70% 70%, rgba(126, 182, 255, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
 }
