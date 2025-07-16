@@ -1,5 +1,5 @@
-/* CSS VARIABLES: Define your color scheme once, use everywhere */
-/* This makes it easy to change colors site-wide */
+/* ===== CSS VARIABLES ===== */
+/* Define your color scheme once, use everywhere - makes it easy to change colors site-wide */
 :root {
     --primary-dark: #000033;    /* Dark navy blue - main brand color */
     --primary-blue: #7EB6FF;    /* Light blue - accent color */
@@ -11,14 +11,16 @@
     --gradient-dark: linear-gradient(135deg, #000033 0%, #000055 100%);
 }
 
-/* GLOBAL RESET: Remove default browser styling for consistent look */
+/* ===== GLOBAL RESET ===== */
+/* Remove default browser styling for consistent look across all browsers */
 * {
     margin: 0;           /* Remove default margins */
     padding: 0;          /* Remove default padding */
-    box-sizing: border-box; /* Include padding/border in element width */
+    box-sizing: border-box; /* Include padding/border in element width calculations */
 }
 
-/* BODY STYLES: Base styling for the entire page */
+/* ===== BODY STYLES ===== */
+/* Base styling for the entire page */
 body {
     font-family: 'Poppins', sans-serif; /* Default font for all text */
     color: var(--primary-dark);         /* Default text color */
@@ -26,12 +28,14 @@ body {
     background: var(--white);           /* Page background color */
 }
 
-/* HEADING STYLES: All headings use Montserrat font */
+/* ===== HEADING STYLES ===== */
+/* All headings use Montserrat font for brand consistency */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* ANIMATED BACKGROUND: Fixed background layer with subtle animation */
+/* ===== ANIMATED BACKGROUND ===== */
+/* Fixed background layer with subtle animation */
 .animated-bg {
     position: fixed;    /* Stays in place when scrolling */
     width: 100%;
@@ -43,9 +47,10 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.5;      /* Semi-transparent */
 }
 
-/* FLOATING ELEMENTS: Decorative animated circles in background */
+/* ===== FLOATING ELEMENTS ===== */
+/* Decorative animated circles in background */
 .float-element {
-    position: fixed;                        /* Fixed position */
+    position: fixed;                        /* Fixed position relative to viewport */
     border-radius: 50%;                     /* Perfect circle */
     background: var(--primary-blue);       /* Blue color */
     opacity: 0.1;                          /* Very transparent */
@@ -81,7 +86,8 @@ h1, h2, h3, h4, h5, h6 {
     66% { transform: translate(-100px, 100px) rotate(240deg); } /* Move down-left, rotate more */
 }
 
-/* NAVIGATION BAR: Fixed header that stays at top when scrolling */
+/* ===== NAVIGATION BAR ===== */
+/* Fixed header that stays at top when scrolling */
 nav {
     position: fixed;                    /* Stays at top when scrolling */
     top: 0;
@@ -110,7 +116,8 @@ nav.scrolled {
     margin: 0 auto;                  /* Center on page */
 }
 
-/* LOGO STYLING: Brand name and icon */
+/* ===== LOGO STYLING ===== */
+/* Brand name and icon */
 .logo {
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
@@ -140,7 +147,8 @@ nav.scrolled {
     95% { transform: rotate(-10deg); }            /* Quick tilt for "blink" */
 }
 
-/* NAVIGATION LINKS: Main menu items */
+/* ===== NAVIGATION LINKS ===== */
+/* Main menu items */
 .nav-links {
     display: flex;                   /* Horizontal layout */
     gap: 40px;                      /* Space between links */
@@ -201,7 +209,8 @@ nav.scrolled {
     display: none;
 }
 
-/* HERO SECTION: Large banner area at top of page */
+/* ===== HERO SECTION ===== */
+/* Large banner area at top of page */
 .hero {
     min-height: 100vh;              /* At least full screen height */
     display: flex;                  /* Flexbox layout */
@@ -509,7 +518,8 @@ nav.scrolled {
     line-height: 1.5;
 }
 
-/* SERVICES SECTION: Main content area about services */
+/* ===== SERVICES SECTION ===== */
+/* Main content area about services */
 .services {
     padding: 100px 50px;          /* Large padding for breathing room */
     background: var(--white);     /* White background */
@@ -671,7 +681,8 @@ nav.scrolled {
     gap: 15px;                    /* Larger gap pushes arrow right */
 }
 
-/* BENEFITS SECTION: Why choose us section */
+/* ===== BENEFITS SECTION ===== */
+/* Why choose us section */
 .benefits {
     padding: 100px 50px;
     background: var(--gray-light); /* Light gray background */
@@ -802,7 +813,8 @@ nav.scrolled {
     z-index: 1;
 }
 
-/* ABOUT SECTION: Company information */
+/* ===== ABOUT SECTION ===== */
+/* Company information */
 .about {
     padding: 100px 50px;
     background: var(--gray-light);
@@ -941,17 +953,6 @@ nav.scrolled {
     font-weight: 600;
 }
 
-/* STEP IMAGE: Styling for images that fit entirely within cards */
-/* Shows complete image without cropping */
-.step-image {
-    max-width: 90%;               /* Slightly smaller than card for padding effect */
-    max-height: 90%;              /* Slightly smaller than card for padding effect */
-    object-fit: contain;          /* Shows entire image without cropping */
-    border-radius: 15px;          /* Slightly rounded corners */
-    position: relative;           /* Above the overlay */
-    z-index: 2;                   /* Above the card overlay effect */
-}
-
 /* ABOUT DECORATION: Floating circles around image */
 .about-decoration {
     position: absolute;
@@ -965,7 +966,8 @@ nav.scrolled {
 .decoration-1 { top: -100px; right: -100px; }     /* Top-right */
 .decoration-2 { bottom: -100px; left: -100px; }   /* Bottom-left */
 
-/* CONTACT SECTION: Contact form and information */
+/* ===== CONTACT SECTION ===== */
+/* Contact form and information */
 .contact {
     padding: 100px 50px;
     background: var(--primary-dark); /* Dark background */
@@ -1121,7 +1123,8 @@ nav.scrolled {
     box-shadow: 0 15px 40px rgba(126, 182, 255, 0.5);
 }
 
-/* FOOTER: Bottom section of page */
+/* ===== FOOTER ===== */
+/* Bottom section of page */
 footer {
     background: var(--primary-dark);
     color: var(--white);
@@ -1176,124 +1179,6 @@ footer {
     font-size: 1.5rem;
     color: var(--primary-dark);
     cursor: pointer;
-}
-
-/* RESPONSIVE DESIGN: Tablet styles (1024px and below) */
-@media (max-width: 1024px) {
-    /* HERO: Single column layout on tablet */
-    .hero-container {
-        grid-template-columns: 1fr; /* Single column */
-        text-align: center;      /* Center text */
-    }
-
-    .hero-visual {
-        display: none;           /* Hide floating cards */
-    }
-
-    .hero-features {
-        justify-content: center; /* Center feature list */
-    }
-
-    /* OTHER SECTIONS: Single column layouts */
-    .about-container { grid-template-columns: 1fr; text-align: center; }
-    .contact-grid { grid-template-columns: 1fr; }
-    .services-grid { grid-template-columns: 1fr; }
-    .benefit-card { grid-template-columns: 1fr; text-align: center; }
-    .benefit-number { margin-bottom: 20px; }
-}
-
-/* RESPONSIVE DESIGN: Mobile styles (768px and below) */
-@media (max-width: 768px) {
-    /* NAVIGATION: Mobile menu */
-    nav { padding: 20px; }
-    .nav-links { display: none; }        /* Hide desktop menu */
-    .mobile-menu-toggle { display: block; } /* Show hamburger menu */
-
-    /* HERO: Mobile layout */
-    .hero, .hero-container { padding: 100px 20px 60px; }
-    .hero-title { font-size: 2rem; }    /* Smaller title */
-    .hero-features { flex-direction: column; align-items: center; }
-
-    /* BUTTONS: Full width on mobile */
-    .cta-container { flex-direction: column; width: 100%; }
-    .cta-button { width: 100%; justify-content: center; }
-
-    /* SECTIONS: Tighter spacing */
-    .services-grid { grid-template-columns: 1fr; }
-    .contact-form { padding: 30px; }
-    .section-header h2 { font-size: 2rem; }
-    .about-values { text-align: left; }
-    .benefits-cta { padding: 40px 20px; }
-    .benefits-cta h3 { font-size: 1.5rem; }
-}
-
-/* SCROLL ANIMATIONS: Classes for elements that animate on scroll */
-.fade-in {
-    opacity: 0;                  /* Starts invisible */
-    transform: translateY(30px); /* Starts below final position */
-    transition: all 0.8s ease;   /* Smooth animation */
-}
-
-.fade-in.visible {
-    opacity: 1;                  /* Becomes visible */
-    transform: translateY(0);    /* Moves to final position */
-}
-
-.slide-in-left {
-    opacity: 0;
-    transform: translateX(-50px); /* Starts left of final position */
-    transition: all 0.8s ease;
-}
-
-.slide-in-left.visible {
-    opacity: 1;
-    transform: translateX(0);    /* Slides to final position */
-}
-
-.slide-in-right {
-    opacity: 0;
-    transform: translateX(50px); /* Starts right of final position */
-    transition: all 0.8s ease;
-}
-
-.slide-in-right.visible {
-    opacity: 1;
-    transform: translateX(0);    /* Slides to final position */
-}
-
-/* FADE IN UP ANIMATION: Used for various elements */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* SLIDE IN ANIMATIONS: Used for hero content */
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 
 /* ===== SIMPLIFIED TRANSFORMATION SECTION STYLES ===== */
@@ -1503,6 +1388,17 @@ footer {
     z-index: 2;                   /* Above overlay but below hover effects */
 }
 
+/* STEP IMAGE: Styling for actual images within floating cards */
+/* Makes images fit perfectly within the card boundaries with slight padding */
+.step-image {
+    max-width: 90%;               /* Slightly smaller than card for padding effect */
+    max-height: 90%;              /* Slightly smaller than card for padding effect */
+    object-fit: contain;          /* Shows entire image without cropping */
+    border-radius: 15px;          /* Slightly rounded corners */
+    position: relative;           /* Above the overlay */
+    z-index: 2;                   /* Above the card overlay effect */
+}
+
 /* ===== SIMPLIFIED CALL TO ACTION ===== */
 /* Clean, focused CTA without metrics cards or complex elements */
 
@@ -1578,20 +1474,131 @@ footer {
     box-shadow: 0 15px 40px rgba(126, 182, 255, 0.5);  /* Stronger glow */
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
-/* Mobile and tablet adaptations for different screen sizes */
+/* ===== SCROLL ANIMATIONS ===== */
+/* Classes for elements that animate on scroll */
+.fade-in {
+    opacity: 0;                  /* Starts invisible */
+    transform: translateY(30px); /* Starts below final position */
+    transition: all 0.8s ease;   /* Smooth animation */
+}
 
-/* MOBILE STYLES: Adaptations for screens 768px and smaller */
-/* Converts grid layout to vertical stack with text above images */
+.fade-in.visible {
+    opacity: 1;                  /* Becomes visible */
+    transform: translateY(0);    /* Moves to final position */
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px); /* Starts left of final position */
+    transition: all 0.8s ease;
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);    /* Slides to final position */
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px); /* Starts right of final position */
+    transition: all 0.8s ease;
+}
+
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);    /* Slides to final position */
+}
+
+/* FADE IN UP ANIMATION: Used for various elements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* SLIDE IN ANIMATIONS: Used for hero content */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Tablet styles (1024px and below) */
+@media (max-width: 1024px) {
+    /* HERO: Single column layout on tablet */
+    .hero-container {
+        grid-template-columns: 1fr; /* Single column */
+        text-align: center;      /* Center text */
+    }
+
+    .hero-visual {
+        display: none;           /* Hide floating cards */
+    }
+
+    .hero-features {
+        justify-content: center; /* Center feature list */
+    }
+
+    /* OTHER SECTIONS: Single column layouts */
+    .about-container { grid-template-columns: 1fr; text-align: center; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .benefit-card { grid-template-columns: 1fr; text-align: center; }
+    .benefit-number { margin-bottom: 20px; }
+}
+
+/* Mobile styles (768px and below) */
 @media (max-width: 768px) {
+    /* NAVIGATION: Mobile menu */
+    nav { padding: 20px; }
+    .nav-links { display: none; }        /* Hide desktop menu */
+    .mobile-menu-toggle { display: block; } /* Show hamburger menu */
+
+    /* HERO: Mobile layout */
+    .hero, .hero-container { padding: 100px 20px 60px; }
+    .hero-title { font-size: 2rem; }    /* Smaller title */
+    .hero-features { flex-direction: column; align-items: center; }
+
+    /* BUTTONS: Full width on mobile */
+    .cta-container { flex-direction: column; width: 100%; }
+    .cta-button { width: 100%; justify-content: center; }
+
+    /* SECTIONS: Tighter spacing */
+    .services-grid { grid-template-columns: 1fr; }
+    .contact-form { padding: 30px; }
+    .section-header h2 { font-size: 2rem; }
+    .about-values { text-align: left; }
+    .benefits-cta { padding: 40px 20px; }
+    .benefits-cta h3 { font-size: 1.5rem; }
     
-    /* SECTION SPACING: Tighter spacing on mobile devices */
+    /* TRANSFORMATION SECTION MOBILE: Vertical stack with text above images */
     .transformation-section {
         padding: 100px 20px;       /* Reduced horizontal padding for small screens */
     }
     
     /* GRID TO VERTICAL: Both normal and reverse rows become single column */
-    /* Text always appears above image on mobile for consistent reading flow */
     .transformation-row,
     .transformation-row.reverse {
         grid-template-columns: 1fr; /* Single column layout */
@@ -1601,7 +1608,6 @@ footer {
     }
     
     /* MOBILE ORDER CONTROL: Ensures text always comes before image */
-    /* Even for "reverse" rows, text appears above image on mobile */
     .transformation-row.reverse .text-content {
         order: 1;                   /* Text appears first */
     }
