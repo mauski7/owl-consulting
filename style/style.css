@@ -941,6 +941,17 @@ nav.scrolled {
     font-weight: 600;
 }
 
+/* STEP IMAGE: Styling for images that fit entirely within cards */
+/* Shows complete image without cropping */
+.step-image {
+    max-width: 90%;               /* Slightly smaller than card for padding effect */
+    max-height: 90%;              /* Slightly smaller than card for padding effect */
+    object-fit: contain;          /* Shows entire image without cropping */
+    border-radius: 15px;          /* Slightly rounded corners */
+    position: relative;           /* Above the overlay */
+    z-index: 2;                   /* Above the card overlay effect */
+}
+
 /* ABOUT DECORATION: Floating circles around image */
 .about-decoration {
     position: absolute;
