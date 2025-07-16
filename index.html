@@ -104,194 +104,129 @@
         </div>
     </section>
     
-    <!-- TRANSFORMATION SECTION: Main container for the visual storytelling section -->
-<!-- This creates the complete transformation story area between hero and services -->
-<section class="transformation-section" id="transformation-section">
-    
-    <!-- FLOATING BACKGROUND SHAPES: Decorative animated elements -->
-    <!-- These create subtle moving shapes in the background for visual interest -->
-    <div class="floating-shapes">
-        <div class="shape"></div>  <!-- Shape 1: Top-left floating circle -->
-        <div class="shape"></div>  <!-- Shape 2: Bottom-right floating circle -->
-        <div class="shape"></div>  <!-- Shape 3: Center-left floating circle -->
-    </div>
-    
-    <!-- SECTION CONTAINER: Centers content and sets maximum width -->
-    <!-- Uses your existing container class for consistent spacing -->
-    <div class="section-container">
+   <!-- TRANSFORMATION SECTION: Main container for the simplified storytelling section -->
+<!-- This creates a clean, grid-based layout without connecting elements -->
+    <section class="transformation-section">
         
-        <!-- SECTION HEADER: Title and subtitle for the entire section -->
-        <!-- Follows your standard section header pattern -->
-        <div class="section-header fade-in">
-          <h2>Title</h2>
-          <!--<p>Three levels of embedded financial leadership—pick the depth that matches your stage and budget.</p>-->
+        <!-- FLOATING SHAPES: Subtle animated background decorations -->
+        <!-- These create visual interest without interfering with content -->
+        <div class="floating-shapes">
+            <div class="shape"></div>  <!-- Shape 1: Top-left animated circle -->
+            <div class="shape"></div>  <!-- Shape 2: Bottom-right animated circle -->
+            <div class="shape"></div>  <!-- Shape 3: Center-left animated circle -->
         </div>
+        
+        <!-- SECTION CONTAINER: Centers content and sets maximum width -->
+        <!-- Uses your existing container class for consistent spacing -->
+        <div class="section-container">
+            
+            <!-- SECTION HEADER: Title and subtitle for the entire section -->
+            <!-- Standard section header following your site's pattern -->
+            <div class="section-header">
+                <h2>Your Financial Transformation Story</h2>  <!-- Main section title -->
+                <p class="section-subtitle">Every successful founder follows this same journey from financial chaos to strategic mastery—let us guide you through yours</p>  <!-- Descriptive subtitle -->
+            </div>
 
-        <!-- STORY FLOW: Container for the entire transformation narrative -->
-        <!-- This holds the connecting line and all story steps -->
-        <div class="story-flow">
-            <div class="story-path"></div>
-            <div class="story-steps">
-                <!-- STEP 1: THE PROBLEM - Founder's initial struggle -->
-                <!-- Represents the "before" state with stress and confusion -->
-                <div class="story-step step-1">
-                    
-                    <!-- STEP VISUAL: Image container for this step -->
-                    <!-- Circular container that will hold the image -->
-                    <div class="step-visual">
-                        <!-- STEP ICON: Emoji indicator floating above the image -->
-                        <!-- Shows emotional state for this step -->
-                        <!--<div class="step-icon">😰</div>-->  <!-- Stressed/worried emoji -->
-                        
-                        <!-- VISUAL CONTENT: Container for the actual image -->
-                        <!-- This is where your "stressed founder" image goes -->
-                        <div class="visual-content">
-                            <!-- IMAGE: Replace this with your actual image -->
-                            <!-- Shows founder overwhelmed with messy workspace and complicated spreadsheets -->
-                            <img src="images/stressed-founder.png" alt="Overwhelmed founder with messy workspace" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+            <!-- STEP 1: First transformation step - Problem phase -->
+            <!-- Grid row with text on LEFT, image on RIGHT -->
+            <div class="transformation-row">
+                
+                <!-- TEXT CONTENT: Left column with step information -->
+                <!-- Contains icon, title, description, and emotion indicator -->
+                <div class="text-content">
+                    <div class="step-icon">😰</div>  <!-- Large emoji showing emotional state -->
+                    <h3 class="step-title">The Financial Fog</h3>  <!-- Step heading -->
+                    <!-- Step description: Explains the problem founders face -->
+                    <p class="step-description">You're brilliant at building products, but the financial side feels like a foreign language. Spreadsheets multiply, investors ask tough questions, and you're spending more time on numbers than on your vision.</p>
+                    <!-- Emotion badge: Shows how founder feels in this state -->
+                    <div class="step-emotion">Overwhelmed & Scattered</div>
+                </div>
+                
+                <!-- IMAGE CONTENT: Right column with floating image card -->
+                <!-- Contains the visual representation of this step -->
+                <div class="image-content">
+                    <!-- FLOATING IMAGE CARD: Clean container for step image -->
+                    <!-- No borders or extra elements - just floating shadow effect -->
+                    <div class="floating-image-card">
+                        <!-- IMAGE PLACEHOLDER: Text description of what image should show -->
+                        <!-- Replace this with actual <img> tag when you have images -->
+                        <div class="image-placeholder">
+                            Overwhelmed founder<br>
+                            with messy workspace<br>
+                            and complicated spreadsheets
                         </div>
                     </div>
-                    
-                    <!-- STEP CONTENT: Text content explaining this step -->
-                    <!-- Title, description, and emotional indicator -->
-                    <div class="step-content">
-                        <h3 class="step-title">The Financial Fog</h3>  <!-- Step title -->
-                        <!-- Step description: Explains the problem state -->
-                        <p class="step-description">You're brilliant at building products, but the financial side feels like a foreign language. Spreadsheets multiply, investors ask tough questions, and you're spending more time on numbers than on your vision.</p>
-                        <!-- Emotional indicator: Shows how founder feels in this state -->
-                        <div class="step-emotion">Overwhelmed & Scattered</div>
-                    </div>
                 </div>
+            </div>
 
-                <!-- STORY BRIDGE: Connector between steps 1 and 2 -->
-                <!-- Shows transition from problem to solution -->
-                <div class="story-bridge">
-                    <div class="bridge-line"></div>        <!-- Left connecting line -->
-                    <div class="owl-mascot">🦉</div>        <!-- Your brand mascot (with blinking animation) -->
-                    <div class="bridge-icon">→</div>        <!-- Arrow showing direction -->
-                    <div class="bridge-line"></div>        <!-- Right connecting line -->
-                </div>
-
-                <!-- STEP 2: THE SOLUTION - Expert partnership begins -->
-                <!-- Represents the intervention/guidance phase -->
-                <div class="story-step step-2">
-                    
-                    <!-- STEP VISUAL: Image container for consultation/partnership -->
-                    <div class="step-visual">
-                        <div class="step-icon">🤝</div>  <!-- Handshake emoji for partnership -->
-                        
-                        <!-- VISUAL CONTENT: Professional consultation image -->
-                        <!-- Shows clean, organized meeting with financial expert -->
-                        <div class="visual-content">
-                            <img src="images/confident-founder.png" alt="Professional consultation meeting" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+            <!-- STEP 2: Second transformation step - Solution phase -->
+            <!-- Grid row with image on LEFT, text on RIGHT (reverse class changes order) -->
+            <div class="transformation-row reverse">
+                
+                <!-- IMAGE CONTENT: Left column with floating image card -->
+                <!-- Note: This comes first in HTML but CSS will position it correctly -->
+                <div class="image-content">
+                    <div class="floating-image-card">
+                        <!-- IMAGE PLACEHOLDER: Professional consultation scene -->
+                        <div class="image-placeholder">
+                            Expert consultation<br>
+                            with organized systems<br>
+                            and clear financial insights
                         </div>
                     </div>
-                    
-                    <!-- STEP CONTENT: Explains the solution/partnership -->
-                    <div class="step-content">
-                        <h3 class="step-title">Expert Partnership</h3>  <!-- Solution title -->
-                        <!-- Description: How your service helps -->
-                        <p class="step-description">Like a wise owl in the darkness, our embedded finance team illuminates your path forward. We organize your chaos, create investor-ready reports, and give you the financial backbone your startup deserves.</p>
-                        <!-- Emotional state: Relief and support -->
-                        <div class="step-emotion">Supported & Guided</div>
-                    </div>
                 </div>
-
-                <!-- STORY BRIDGE: Connector between steps 2 and 3 -->
-                <!-- Shows transition from solution to results -->
-                <div class="story-bridge">
-                    <div class="bridge-line"></div>        <!-- Left connecting line -->
-                    <div class="bridge-icon">→</div>        <!-- Arrow showing progression -->
-                    <div class="bridge-line"></div>        <!-- Right connecting line -->
+                
+                <!-- TEXT CONTENT: Right column with step information -->
+                <!-- Contains the solution/partnership messaging -->
+                <div class="text-content">
+                    <div class="step-icon">🤝</div>  <!-- Handshake emoji for partnership -->
+                    <h3 class="step-title">Expert Partnership</h3>  <!-- Solution step title -->
+                    <!-- Description: How your service helps solve the problem -->
+                    <p class="step-description">Like a wise owl in the darkness, our embedded finance team illuminates your path forward. We organize your chaos, create investor-ready reports, and give you the financial backbone your startup deserves.</p>
+                    <!-- Emotion indicator: Relief and support -->
+                    <div class="step-emotion">Supported & Guided</div>
                 </div>
+            </div>
 
-                <!-- STEP 3: THE RESULT - Successful outcome -->
-                <!-- Represents the "after" state with confidence and success -->
-                <div class="story-step step-3">
-                    
-                    <!-- STEP VISUAL: Success/confidence image -->
-                    <div class="step-visual">
-                        <div class="step-icon">🚀</div>  <!-- Rocket emoji for growth/success -->
-                        
-                        <!-- VISUAL CONTENT: Confident founder image -->
-                        <!-- Shows founder confidently presenting or leading -->
-                        <div class="visual-content">
-                            <img src="images/confident-founder.jpg" alt="Confident founder presenting to team" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+            <!-- STEP 3: Third transformation step - Success phase -->
+            <!-- Grid row with text on LEFT, image on RIGHT (same as step 1) -->
+            <div class="transformation-row">
+                
+                <!-- TEXT CONTENT: Left column with success messaging -->
+                <!-- Shows the final positive outcome -->
+                <div class="text-content">
+                    <div class="step-icon">🚀</div>  <!-- Rocket emoji for growth/success -->
+                    <h3 class="step-title">Strategic Mastery</h3>  <!-- Success step title -->
+                    <!-- Description: Benefits and final outcome -->
+                    <p class="step-description">With finances expertly managed, you're free to do what you do best—innovate, lead, and scale. Your numbers tell a compelling story, and you present to investors with absolute confidence.</p>
+                    <!-- Final emotional state: Confidence and empowerment -->
+                    <div class="step-emotion">Confident & Empowered</div>
+                </div>
+                
+                <!-- IMAGE CONTENT: Right column with success image -->
+                <!-- Shows confident, successful founder -->
+                <div class="image-content">
+                    <div class="floating-image-card">
+                        <!-- IMAGE PLACEHOLDER: Confident founder scene -->
+                        <div class="image-placeholder">
+                            Confident founder<br>
+                            presenting to investors<br>
+                            with complete confidence
                         </div>
                     </div>
-                    
-                    <!-- STEP CONTENT: Explains the successful outcome -->
-                    <div class="step-content">
-                        <h3 class="step-title">Strategic Mastery</h3>  <!-- Result title -->
-                        <!-- Description: Benefits and outcomes -->
-                        <p class="step-description">With finances expertly managed, you're free to do what you do best—innovate, lead, and scale. Your numbers tell a compelling story, and you present to investors with absolute confidence.</p>
-                        <!-- Final emotional state: Success and empowerment -->
-                        <div class="step-emotion">Confident & Empowered</div>
-                    </div>
                 </div>
             </div>
-            <!-- Place .story-bridge elements here, between steps -->
-            <div class="story-bridge">
-                <div class="bridge-line"></div>
-                <div class="owl-mascot">🦉</div>
-                <div class="bridge-icon">→</div>
-                <div class="bridge-line"></div>
-            </div>
-            <div class="story-bridge">
-                <div class="bridge-line"></div>
-                <div class="bridge-icon">→</div>
-                <div class="bridge-line"></div>
-            </div>
-        </div>
 
-        <!-- TRANSFORMATION STATS: Quantified results section -->
-        <!-- Shows measurable benefits using your card design pattern -->
-        <div class="transformation-stats">
-            
-            <!-- STAT CARD 1: Speed improvement -->
-            <!-- Shows how much faster financial processes become -->
-            <div class="stat-card">
-                <span class="stat-number">10x</span>                    <!-- Large number -->
-                <span class="stat-label">Faster Financial Reporting</span>  <!-- What the number means -->
-            </div>
-            
-            <!-- STAT CARD 2: Investor confidence -->
-            <!-- Shows improvement in investor relationships -->
-            <div class="stat-card">
-                <span class="stat-number">95%</span>                         <!-- Percentage -->
-                <span class="stat-label">Improved Investor Confidence</span>  <!-- Benefit description -->
-            </div>
-            
-            <!-- STAT CARD 3: Time savings -->
-            <!-- Shows how much time is saved on financial tasks -->
-            <div class="stat-card">
-                <span class="stat-number">75%</span>                    <!-- Percentage saved -->
-                <span class="stat-label">Time Saved on Financials</span> <!-- What time is saved on -->
-            </div>
-            
-            <!-- STAT CARD 4: Peace of mind -->
-            <!-- Emotional/psychological benefit -->
-            <div class="stat-card">
-                <span class="stat-number">100%</span>              <!-- Complete benefit -->
-                <span class="stat-label">Peace of Mind</span>      <!-- Emotional outcome -->
+            <!-- SIMPLIFIED CALL TO ACTION: Clean, focused CTA section -->
+            <!-- Removed metrics cards, streamlined for simplicity -->
+            <div class="simple-cta">
+                <h3 class="cta-title">Ready to Transform Your Story?</h3>  <!-- Action-oriented headline -->
+                <p class="cta-text">Join hundreds of founders who've moved from financial stress to strategic success.</p>  <!-- Supporting text -->
+                <!-- CTA BUTTON: Links to contact section -->
+                <a href="#contact" class="cta-button">Start Your Transformation</a>
             </div>
         </div>
-
-        <!-- OUTCOME SECTION: Call-to-action area -->
-        <!-- Final section encouraging visitors to take action -->
-        <div class="outcome-section">
-            <!-- OUTCOME TITLE: Compelling headline for action -->
-            <h3 class="outcome-title">Ready to Transform Your Story?</h3>
-            
-            <!-- OUTCOME TEXT: Supporting text that builds urgency -->
-            <p class="outcome-text">Join hundreds of founders who've moved from financial stress to strategic success. Your breakthrough moment is just one conversation away.</p>
-            
-            <!-- OUTCOME CTA: Main action button -->
-            <!-- Links to your contact section (you can change #contact to your preferred target) -->
-            <a href="#contact" class="outcome-cta">Start Your Transformation</a>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- SERVICES SECTION: Main content about service offerings -->
     <section class="services" id="services">
