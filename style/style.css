@@ -922,18 +922,12 @@ nav.scrolled {
         margin: 60px 0;
     }
     
-    .transformation-row .text-content {
-        order: 1;
-    }
-    
-    .transformation-row .image-content {
-        order: 2;
-    }
-    
+    .transformation-row .text-content,
     .transformation-row.reverse .text-content {
         order: 1;
     }
     
+    .transformation-row .image-content,
     .transformation-row.reverse .image-content {
         order: 2;
     }
