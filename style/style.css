@@ -137,7 +137,9 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* ===== 6. NAVIGATION ===== */
+/* ===== 6. NAVIGATION===== */
+
+/* Main navigation container */
 nav {
     position: fixed;
     top: 0;
@@ -157,26 +159,34 @@ nav.scrolled {
     box-shadow: var(--shadow-medium);
 }
 
-/* Navigation container */
+/* Navigation container - flexible layout */
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: var(--container-max-width);
     margin: 0 auto;
+    width: 100%;
+    min-width: 0;
 }
 
-/* Logo styling */
+/* Logo styling with responsive font size */
 .logo {
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
+    font-size: clamp(18px, 2.5vw, 24px);
     font-weight: 700;
     color: var(--primary-dark);
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: clamp(6px, 1vw, 10px);
     transition: var(--transition-fast);
+    flex-shrink: 1;
+    min-width: 0;
+    max-width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .logo:hover {
@@ -185,8 +195,9 @@ nav.scrolled {
 
 /* Logo icon with blinking animation */
 .logo-icon {
-    font-size: 32px;
+    font-size: clamp(20px, 3vw, 32px);
     animation: blink 4s infinite;
+    flex-shrink: 0;
 }
 
 @keyframes blink {
@@ -194,21 +205,25 @@ nav.scrolled {
     95% { transform: rotate(-10deg); }
 }
 
-/* Navigation links */
+/* Navigation links container */
 .nav-links {
     display: flex;
-    gap: 40px;
+    gap: clamp(20px, 3vw, 40px);
     list-style: none;
     align-items: center;
+    flex-shrink: 0;
+    margin-left: auto;
 }
 
+/* Individual navigation links */
 .nav-links a {
     text-decoration: none;
     color: var(--primary-dark);
     font-weight: 500;
-    font-size: 16px;
+    font-size: clamp(14px, 1.5vw, 16px);
     position: relative;
     transition: var(--transition-fast);
+    white-space: nowrap;
 }
 
 /* Animated underline effect */
@@ -235,11 +250,15 @@ nav.scrolled {
 .nav-cta {
     background: var(--gradient-primary) !important;
     color: var(--white) !important;
-    padding: 12px 30px;
+    padding: clamp(8px, 1.2vw, 12px) clamp(20px, 2.5vw, 30px);
     border-radius: 50px;
     font-weight: 600;
+    font-size: clamp(14px, 1.4vw, 16px) !important;
     box-shadow: 0 5px 20px rgba(126, 182, 255, 0.3);
     transition: var(--transition-fast);
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: fit-content;
 }
 
 .nav-cta:hover {
@@ -247,6 +266,7 @@ nav.scrolled {
     box-shadow: 0 8px 30px rgba(126, 182, 255, 0.5);
 }
 
+/* Disable underline effect for CTA button */
 .nav-cta::after {
     display: none;
 }
@@ -259,6 +279,178 @@ nav.scrolled {
     font-size: 1.5rem;
     color: var(--primary-dark);
     cursor: pointer;
+    padding: 5px;
+    flex-shrink: 0;
+}
+
+/* ===== RESPONSIVE NAVIGATION BREAKPOINTS ===== */
+
+/* Large tablets and small laptops */
+@media (max-width: 1200px) and (min-width: 901px) {
+    nav {
+        padding: 20px 30px;
+    }
+    
+    nav.scrolled {
+        padding: 15px 30px;
+    }
+    
+    .nav-container {
+        padding: 0 20px;
+    }
+    
+    .logo {
+        font-size: 22px;
+    }
+    
+    .nav-links {
+        gap: 25px;
+    }
+    
+    .nav-links a {
+        font-size: 15px;
+    }
+    
+    .nav-cta {
+        padding: 10px 25px;
+        font-size: 15px;
+    }
+}
+
+/* Medium tablets */
+@media (max-width: 1024px) and (min-width: 901px) {
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .logo {
+        font-size: 20px;
+        max-width: 55%;
+    }
+    
+    .nav-links {
+        gap: 20px;
+    }
+    
+    .nav-cta {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Switch to mobile menu - EARLY BREAKPOINT */
+@media (max-width: 900px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .logo {
+        font-size: 20px;
+        gap: 6px;
+        max-width: 70%;
+    }
+    
+    .logo-icon {
+        font-size: 28px;
+    }
+}
+
+/* Standard mobile styles */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+    }
+    
+    nav.scrolled {
+        padding: 12px 20px;
+    }
+    
+    .nav-container {
+        padding: 0;
+    }
+    
+    .logo {
+        font-size: 18px;
+        gap: 5px;
+        max-width: 75%;
+    }
+    
+    .logo-icon {
+        font-size: 24px;
+    }
+    
+    .mobile-menu-toggle {
+        font-size: 1.2rem;
+        padding: 5px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+    nav {
+        padding: 12px 15px;
+    }
+    
+    nav.scrolled {
+        padding: 10px 15px;
+    }
+    
+    .logo {
+        font-size: 16px;
+        gap: 4px;
+        max-width: 80%;
+    }
+    
+    .logo-icon {
+        font-size: 20px;
+    }
+    
+    .mobile-menu-toggle {
+        font-size: 1.1rem;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+    nav {
+        padding: 10px 12px;
+    }
+    
+    .logo {
+        font-size: 14px;
+        max-width: 75%;
+    }
+    
+    .logo-icon {
+        font-size: 18px;
+    }
+    
+    .mobile-menu-toggle {
+        font-size: 1rem;
+    }
+}
+
+/* ===== LANDSCAPE PHONE ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+    nav {
+        padding: 10px 20px;
+    }
+    
+    nav.scrolled {
+        padding: 8px 20px;
+    }
+    
+    .logo {
+        font-size: 16px;
+    }
+    
+    .logo-icon {
+        font-size: 20px;
+    }
 }
 
 /* ===== 7. HERO SECTION ===== */
