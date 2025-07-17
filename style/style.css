@@ -137,9 +137,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* ===== 6. NAVIGATION===== */
-
-/* Main navigation container */
+/* ===== 6. NAVIGATION ===== */
 nav {
     position: fixed;
     top: 0;
@@ -152,14 +150,12 @@ nav {
     transition: var(--transition-fast);
 }
 
-/* Navigation when scrolled - tighter appearance */
 nav.scrolled {
     padding: 15px 50px;
     background: rgba(255, 255, 255, 0.98);
     box-shadow: var(--shadow-medium);
 }
 
-/* Navigation container - flexible layout */
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -167,23 +163,23 @@ nav.scrolled {
     max-width: var(--container-max-width);
     margin: 0 auto;
     width: 100%;
-    min-width: 0;
+    overflow: visible;
+    position: relative;
 }
 
-/* Logo styling with responsive font size */
 .logo {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(18px, 2.5vw, 24px);
+    font-size: clamp(16px, 2vw, 24px);
     font-weight: 700;
     color: var(--primary-dark);
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: clamp(6px, 1vw, 10px);
+    gap: clamp(4px, 1vw, 10px);
     transition: var(--transition-fast);
-    flex-shrink: 1;
+    flex-shrink: 2;
     min-width: 0;
-    max-width: 60%;
+    max-width: 50%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -193,7 +189,6 @@ nav.scrolled {
     transform: scale(1.05);
 }
 
-/* Logo icon with blinking animation */
 .logo-icon {
     font-size: clamp(20px, 3vw, 32px);
     animation: blink 4s infinite;
@@ -205,28 +200,26 @@ nav.scrolled {
     95% { transform: rotate(-10deg); }
 }
 
-/* Navigation links container */
 .nav-links {
     display: flex;
-    gap: clamp(20px, 3vw, 40px);
+    gap: clamp(15px, 2vw, 30px);
     list-style: none;
     align-items: center;
-    flex-shrink: 0;
+    flex-shrink: 1;
     margin-left: auto;
+    margin-right: 10px;
 }
 
-/* Individual navigation links */
 .nav-links a {
     text-decoration: none;
     color: var(--primary-dark);
     font-weight: 500;
-    font-size: clamp(14px, 1.5vw, 16px);
+    font-size: clamp(13px, 1.3vw, 16px);
     position: relative;
     transition: var(--transition-fast);
     white-space: nowrap;
 }
 
-/* Animated underline effect */
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -246,19 +239,22 @@ nav.scrolled {
     width: 100%;
 }
 
-/* Call-to-action button in navigation */
 .nav-cta {
     background: var(--gradient-primary) !important;
     color: var(--white) !important;
-    padding: clamp(8px, 1.2vw, 12px) clamp(20px, 2.5vw, 30px);
+    padding: 10px 20px;
     border-radius: 50px;
     font-weight: 600;
-    font-size: clamp(14px, 1.4vw, 16px) !important;
+    font-size: 14px;
     box-shadow: 0 5px 20px rgba(126, 182, 255, 0.3);
     transition: var(--transition-fast);
     white-space: nowrap;
     flex-shrink: 0;
     min-width: fit-content;
+    position: relative;
+    z-index: 10;
+    overflow: visible;
+    display: inline-block;
 }
 
 .nav-cta:hover {
@@ -266,12 +262,10 @@ nav.scrolled {
     box-shadow: 0 8px 30px rgba(126, 182, 255, 0.5);
 }
 
-/* Disable underline effect for CTA button */
 .nav-cta::after {
     display: none;
 }
 
-/* Mobile menu toggle (hidden by default) */
 .mobile-menu-toggle {
     display: none;
     background: none;
@@ -283,10 +277,7 @@ nav.scrolled {
     flex-shrink: 0;
 }
 
-/* ===== RESPONSIVE NAVIGATION BREAKPOINTS ===== */
-
-/* Large tablets and small laptops */
-@media (max-width: 1200px) and (min-width: 901px) {
+@media (max-width: 1200px) and (min-width: 1101px) {
     nav {
         padding: 20px 30px;
     }
@@ -310,48 +301,21 @@ nav.scrolled {
     .nav-links a {
         font-size: 15px;
     }
-    
-    .nav-cta {
-        padding: 10px 25px;
-        font-size: 15px;
-    }
 }
 
-/* Medium tablets */
-@media (max-width: 1024px) and (min-width: 901px) {
-    .nav-container {
-        padding: 0 15px;
-    }
-    
-    .logo {
-        font-size: 20px;
-        max-width: 55%;
-    }
-    
-    .nav-links {
-        gap: 20px;
-    }
-    
-    .nav-cta {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-}
-
-/* Switch to mobile menu - EARLY BREAKPOINT */
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
     .nav-links {
         display: none;
     }
     
     .mobile-menu-toggle {
         display: block;
+        margin-left: 10px;
     }
     
     .logo {
-        font-size: 20px;
-        gap: 6px;
         max-width: 70%;
+        font-size: 20px;
     }
     
     .logo-icon {
@@ -359,7 +323,6 @@ nav.scrolled {
     }
 }
 
-/* Standard mobile styles */
 @media (max-width: 768px) {
     nav {
         padding: 15px 20px;
@@ -375,8 +338,7 @@ nav.scrolled {
     
     .logo {
         font-size: 18px;
-        gap: 5px;
-        max-width: 75%;
+        max-width: 65%;
     }
     
     .logo-icon {
@@ -385,44 +347,34 @@ nav.scrolled {
     
     .mobile-menu-toggle {
         font-size: 1.2rem;
-        padding: 5px;
     }
 }
 
-/* Small mobile screens */
 @media (max-width: 480px) {
     nav {
         padding: 12px 15px;
     }
     
-    nav.scrolled {
-        padding: 10px 15px;
-    }
-    
     .logo {
         font-size: 16px;
-        gap: 4px;
-        max-width: 80%;
+        gap: 5px;
+        max-width: 60%;
     }
     
     .logo-icon {
         font-size: 20px;
     }
-    
-    .mobile-menu-toggle {
-        font-size: 1.1rem;
-    }
 }
 
-/* Very small screens */
-@media (max-width: 320px) {
+@media (max-width: 380px) {
     nav {
         padding: 10px 12px;
     }
     
     .logo {
         font-size: 14px;
-        max-width: 75%;
+        gap: 4px;
+        max-width: 55%;
     }
     
     .logo-icon {
@@ -434,14 +386,20 @@ nav.scrolled {
     }
 }
 
-/* ===== LANDSCAPE PHONE ===== */
-@media (max-height: 500px) and (orientation: landscape) {
-    nav {
-        padding: 10px 20px;
+@media (max-width: 320px) {
+    .logo {
+        font-size: 13px;
+        max-width: 50%;
     }
     
-    nav.scrolled {
-        padding: 8px 20px;
+    .logo-icon {
+        font-size: 16px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+    nav {
+        padding: 8px 15px;
     }
     
     .logo {
