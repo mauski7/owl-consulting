@@ -888,9 +888,21 @@ nav.scrolled {
 @media (max-width: 1024px) {
     .transformation-row,
     .transformation-row.reverse {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: 40px;
         text-align: center;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    .transformation-row .text-content,
+    .transformation-row.reverse .text-content {
+        order: 1 !important;
+    }
+    
+    .transformation-row .image-content,
+    .transformation-row.reverse .image-content {
+        order: 2 !important;
     }
     
     .floating-image-card {
