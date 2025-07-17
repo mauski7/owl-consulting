@@ -420,7 +420,6 @@ nav.scrolled {
     overflow: hidden;
 }
 
-/* Hero background layers */
 .hero-video-container {
     position: absolute;
     top: 0;
@@ -448,7 +447,6 @@ nav.scrolled {
     backdrop-filter: blur(1px);
 }
 
-/* Hero content container */
 .hero-container {
     position: relative;
     z-index: 2;
@@ -461,12 +459,10 @@ nav.scrolled {
     align-items: center;
 }
 
-/* Hero content (left side) */
 .hero-content {
     animation: slideInLeft 1s ease;
 }
 
-/* Hero title */
 .hero-title {
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     font-weight: 800;
@@ -485,7 +481,6 @@ nav.scrolled {
     animation-delay: 0.2s;
 }
 
-/* Gradient text effect */
 .gradient-text {
     background: linear-gradient(to right, var(--primary-blue), #ffffff);
     background-clip: text;
@@ -494,7 +489,6 @@ nav.scrolled {
     background-size: 200% 200%;
 }
 
-/* Hero description */
 .hero-description {
     font-size: 1.25rem;
     line-height: 1.8;
@@ -505,7 +499,6 @@ nav.scrolled {
     animation: fadeInUp 1s ease 0.4s both;
 }
 
-/* Call-to-action buttons */
 .cta-container {
     display: flex;
     gap: 20px;
@@ -532,7 +525,6 @@ nav.scrolled {
     font-size: 1.2rem;
 }
 
-/* Primary CTA button */
 .cta-primary {
     background: var(--gradient-primary);
     color: var(--white);
@@ -559,7 +551,6 @@ nav.scrolled {
     box-shadow: 0 15px 40px rgba(126, 182, 255, 0.5);
 }
 
-/* Secondary CTA button */
 .cta-secondary {
     background: rgba(255, 255, 255, 0.1);
     color: var(--white);
@@ -573,7 +564,6 @@ nav.scrolled {
     transform: translateY(-3px);
 }
 
-/* Hero visual (right side) */
 .hero-visual {
     position: relative;
     animation: slideInRight 1s ease;
@@ -587,7 +577,7 @@ nav.scrolled {
 }
 
 .hero-card {
-    background: var(--gray-light);
+    background: var(--gradient-primary);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 30px;
@@ -609,12 +599,12 @@ nav.scrolled {
 .hero-card h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.3rem;
-    color: var(--primary-dark);
+    color: var(--white);
     margin-bottom: 8px;
 }
 
 .hero-card p {
-    color: var(--gray-medium);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 0.95rem;
     line-height: 1.5;
 }
