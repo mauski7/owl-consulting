@@ -1,3 +1,116 @@
+* ===== DIRECT BACKGROUND FIX - ADD TO TOP OF YOUR CSS ===== */
+/* This forces the dark feathered background to appear */
+
+/* Hide the animated-bg div that's interfering */
+.animated-bg {
+    display: none !important;
+}
+
+/* Force HTML and body to be dark */
+html {
+    background: #000033 !important;
+    min-height: 100% !important;
+}
+
+body {
+    background: #000033 !important;
+    background: linear-gradient(135deg, #000033 0%, #000044 100%) !important;
+    min-height: 100vh !important;
+    position: relative !important;
+    overflow-x: hidden !important;
+}
+
+/* Force the feathered texture overlay to appear */
+body::before {
+    content: '' !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: 
+        radial-gradient(ellipse 200px 60px at 20% 30%, rgba(126, 182, 255, 0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 150px 40px at 70% 60%, rgba(126, 182, 255, 0.06) 0%, transparent 70%),
+        radial-gradient(ellipse 300px 80px at 40% 80%, rgba(126, 182, 255, 0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 180px 50px at 85% 20%, rgba(126, 182, 255, 0.05) 0%, transparent 70%),
+        radial-gradient(ellipse 220px 70px at 60% 40%, rgba(126, 182, 255, 0.04) 0%, transparent 70%),
+        linear-gradient(135deg, #000033 0%, #000044 100%) !important;
+    opacity: 0.9 !important;
+    pointer-events: none !important;
+    z-index: -10 !important;
+}
+
+/* Force floating elements to be visible */
+.float-element {
+    position: fixed !important;
+    border-radius: 50% 10% 50% 10% !important;
+    background: rgba(126, 182, 255, 0.12) !important;
+    opacity: 0.8 !important;
+    filter: blur(60px) !important;
+    animation: floatFeather 20s infinite ease-in-out !important;
+    pointer-events: none !important;
+    z-index: -5 !important;
+}
+
+.float-element.float-1 {
+    width: 300px !important;
+    height: 150px !important;
+    top: 20% !important;
+    right: 10% !important;
+    animation-delay: 0s !important;
+}
+
+.float-element.float-2 {
+    width: 250px !important;
+    height: 125px !important;
+    top: 60% !important;
+    left: 15% !important;
+    animation-delay: 8s !important;
+}
+
+.float-element.float-3 {
+    width: 200px !important;
+    height: 100px !important;
+    top: 40% !important;
+    left: 60% !important;
+    animation-delay: 15s !important;
+}
+
+/* Force sections to be transparent */
+.transformation-section,
+.services,
+.benefits,
+.about {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* Ensure navigation is visible */
+nav {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    z-index: 1000 !important;
+}
+
+/* Force contact section to be dark */
+.contact {
+    background: #000033 !important;
+    background: linear-gradient(135deg, #000033 0%, #000055 100%) !important;
+    color: white !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* Force footer to be dark */
+footer {
+    background: #000033 !important;
+    color: white !important;
+}
+
+/* ===== END OF DIRECT FIX ===== */
+
 /* ===============================================
    OWL FINANCE & STRATEGY CONSULTING - MAIN CSS
    ===============================================
