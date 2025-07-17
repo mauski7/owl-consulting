@@ -577,7 +577,8 @@ nav.scrolled {
 }
 
 .hero-card {
-    background: var(--gradient-primary);
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 30px;
@@ -587,6 +588,8 @@ nav.scrolled {
 }
 
 .hero-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--white);
     transform: translateY(-5px) scale(1.02);
     box-shadow: var(--shadow-medium);
 }
