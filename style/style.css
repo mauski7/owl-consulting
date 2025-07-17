@@ -57,7 +57,7 @@ body {
 body::before {
     content: '';
     position: fixed;
-    opasity: 0.9; /* Adjust opacity for feather effect */
+    opacity: 0.9; /* Adjust opacity for feather effect */
     top: 0;
     left: 0;
     width: 100%;
