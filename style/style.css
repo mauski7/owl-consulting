@@ -306,7 +306,7 @@ a:hover{color:var(--clr-navy);}
 
   @media (max-width: 1000px) {
     .hero h1 {
-      font-size: clamp(var(--fs-2xl), 7vw, var(--fs-4xl));
+      font-size: clamp(var(--fs-4xl), 8vw, var(--fs-6xl));
       display: block;
       -webkit-line-clamp: unset;
       line-clamp: unset;
@@ -384,7 +384,7 @@ a:hover{color:var(--clr-navy);}
 
 @media (max-width: 600px) {
   .hero h1 {
-    font-size:clamp(1.3rem, 7vw, 2.5rem);
+    font-size: clamp(var(--fs-3xl), 8vw, var(--fs-5xl));
     -webkit-line-clamp: unset;
     line-clamp: unset;
     display: block;
@@ -393,7 +393,7 @@ a:hover{color:var(--clr-navy);}
 }
 
 .hero h2 {
-  font-size:clamp(3rem, 7vw, 3rem);
+  font-size:clamp(var(--fs-3xl), 7vw, var(--fs-4xl));
   margin-bottom:1rem;
   line-height:1.1;
   margin-top:1.75rem;
@@ -418,7 +418,7 @@ a:hover{color:var(--clr-navy);}
 
 @media (max-width: 600px) {
   .hero h2 {
-    font-size:clamp(1.3rem, 7vw, 1rem);
+    font-size: clamp(var(--fs-xl), 6vw, var(--fs-2xl));
     -webkit-line-clamp: unset;
     line-clamp: unset;
     display: block;
@@ -442,6 +442,18 @@ a:hover{color:var(--clr-navy);}
   display:inline-block;
   padding:0.15em 1em;
   border-radius:8px;
+}
+
+@media (max-width: 768px) {
+  .hero p {
+    font-size: var(--fs-2xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero p {
+    font-size: var(--fs-xl);
+  }
 }
 .hero .cta-primary {
   margin:0;
