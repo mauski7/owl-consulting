@@ -927,7 +927,7 @@ a:hover{color:var(--clr-navy);}
 .table-heading {
   margin-bottom: 1.25rem;
   margin-top: 3rem;
-  font-size: 2.5rem;
+  font-size: var(--fs-5xl);
   font-weight: 800;
   text-align: center;
   letter-spacing: -0.01em;
@@ -937,7 +937,7 @@ a:hover{color:var(--clr-navy);}
   max-width: 1200px;
   margin: 2.5rem auto 2.5rem auto;
   border-collapse: collapse;
-  font-size: 1.15rem;
+  font-size: var(--fs-lg);
   padding-left: 4vw;
   padding-right: 4vw;
   box-sizing: border-box;
@@ -1086,7 +1086,7 @@ section.gradient-bg {
   padding: 3rem 2.5rem;
   box-shadow: 0 6px 24px rgba(0,0,0,0.10);
   font-style: italic;
-  font-size: 1.6rem;
+  font-size: var(--fs-3xl);
   max-width: 1100px;
   margin: 0 auto 2.5rem auto;
   text-align: center;
@@ -1094,7 +1094,7 @@ section.gradient-bg {
   letter-spacing: -0.01em;
   color: #111;
 }
-.testimonial-client{display:flex;justify-content:center;align-items:center;gap:.75rem;font-size:1.25rem;}
+.testimonial-client{display:flex;justify-content:center;align-items:center;gap:.75rem;font-size:var(--fs-xl);}
 .client-logo {
   width: 160px;
   height: 160px;
@@ -1138,7 +1138,7 @@ section.contact {
 .contact-divider span {
   color: var(--clr-navy);
   font-weight: 600;
-  font-size: 1.08rem;
+  font-size: var(--fs-lg);
   padding: 0 0.7em;
   background: var(--clr-light);
   border-radius: 6px;
@@ -1149,12 +1149,12 @@ input,textarea{
   padding: 0.35rem 0.7rem;
   border: 2px solid var(--clr-gray);
   border-radius: 8px;
-  font-size: 0.98rem;
+  font-size: var(--fs-base);
   transition: border var(--dur-slow) var(--easing);
 }
 .contact-form .cta-primary {
   width: 100%;
-  font-size: 1.15rem;
+  font-size: var(--fs-lg);
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   box-sizing: border-box;
@@ -1165,24 +1165,24 @@ input:focus,textarea:focus{outline:none;border-color:var(--clr-blue);}
 /* ─────────────── FOOTER ──────────────────────────────── */
 footer{
   background:var(--clr-navy);color:var(--clr-white);
-  text-align:center;padding:2rem 1rem;font-size:.9rem;
+  text-align:center;padding:2rem 1rem;font-size:var(--fs-sm);
   color: var(--clr-white) !important;
   text-shadow: none !important;
   line-height: 1.5;
 }
 .journey-card h1 {
-  font-size: 2.1em;
+  font-size: var(--fs-4xl);
 }
 .journey-card h2 {
-  font-size: 1.5em;
+  font-size: var(--fs-3xl);
 }
 .journey-card h3 {
-  font-size: 1.18em;
+  font-size: var(--fs-2xl);
 }
 .journey-card h4,
 .journey-card h5,
 .journey-card h6 {
-  font-size: 1.05em;
+  font-size: var(--fs-xl);
 }
 
 /* ─────────────── BACK-TO-TOP BUTTON ───────────────────── */
@@ -1214,18 +1214,18 @@ footer{
   }
   /* Mobile-friendly comparison table */
   .comparison-table {
-    font-size: 0.9rem;
+    font-size: var(--fs-sm);
     padding-left: 2vw;
     padding-right: 2vw;
     margin: 1.5rem auto 1.5rem auto;
   }
   .comparison-table thead th {
     padding: 0.5rem 0.3rem;
-    font-size: 0.85rem;
+    font-size: var(--fs-sm);
   }
   .comparison-table tbody td {
     padding: 0.5rem 0.3rem;
-    font-size: 0.8rem;
+    font-size: var(--fs-sm);
   }
   .comparison-table thead th:first-child {
     padding-left: 0.5rem;
@@ -1244,21 +1244,21 @@ footer{
   }
   /* Extra small mobile comparison table */
   .comparison-table {
-    font-size: 0.8rem;
+    font-size: var(--fs-xs);
     padding-left: 1vw;
     padding-right: 1vw;
     margin: 1rem auto 1rem auto;
   }
   .comparison-table thead th {
     padding: 0.4rem 0.2rem;
-    font-size: 0.75rem;
+    font-size: var(--fs-xs);
   }
   .comparison-table tbody td {
     padding: 0.4rem 0.2rem;
-    font-size: 0.7rem;
+    font-size: var(--fs-xs);
   }
   .table-heading {
-    font-size: 1.8rem;
+    font-size: var(--fs-3xl);
     margin-bottom: 1rem;
     margin-top: 2rem;
   }
