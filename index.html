@@ -1,552 +1,327 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <!-- DOCUMENT SETUP: These meta tags tell the browser how to display your site -->
-        <meta charset="UTF-8"> <!-- Character encoding for proper text display -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes site mobile-friendly -->
-        <title>Owl Finance & Strategy Consulting | Your Partner in Growth</title> <!-- Tab title and SEO -->
-        
-        <!-- FONTS: Importing Google Fonts for your typography -->
-        <!-- Montserrat: Used for headings (bold, modern) -->
-        <!-- Poppins: Used for body text (clean, readable) -->
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-        
-        <!-- CSS FILE: Link to your separate stylesheet -->
-        <link rel="stylesheet" href="style/style.css">
-    </head>
-    <body>
-        <!-- ANIMATED BACKGROUND ELEMENTS: Decorative floating circles -->
-        <div class="animated-bg"></div>         <!-- Base background layer -->
-        <div class="float-element float-1"></div> <!-- Large floating circle -->
-        <div class="float-element float-2"></div> <!-- Medium floating circle -->
-        <div class="float-element float-3"></div> <!-- Small floating circle -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owl Finance &amp; Strategy Consulting | Finance &amp; Strategy for Startups</title>
 
-        <!-- NAVIGATION BAR: Fixed header that stays at top -->
-        <nav id="navbar">
-            <div class="nav-container">
-                <!-- LOGO: Company name and icon -->
-                <a href="#" class="logo">
-                    <span class="logo-icon">🦉</span>
-                    Owl Finance & Strategy Consulting
-                </a>
-                <!-- MAIN NAVIGATION MENU: Desktop menu (hidden on mobile) -->
-                <ul class="nav-links">
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#contact" class="nav-cta">Get Started</a></li> <!-- Special CTA button -->
-                </ul>
-                <!-- MOBILE MENU TOGGLE: Hamburger menu for mobile (hidden on desktop) -->
-                <button class="mobile-menu-toggle">☰</button>
-            </div>
-        </nav>
+  <!-- SEO & SOCIAL -->
+  <meta name="description" content="Fractional CFO, strategic finance, and investor-ready deliverables for early-stage startups.">
+  <meta property="og:title" content="Owl Finance &amp; Strategy Consulting – Your Partner in Growth">
+  <meta property="og:description" content="Startup-ready financial and strategic leadership—no full-time overhead.">
+  <meta property="og:image" content="https://mauski7.github.io/owl-consulting/images/og-cover.png">
+  <meta property="og:url" content="https://mauski7.github.io/owl-consulting/">
+  <meta name="twitter:card" content="summary_large_image">
 
-        <!-- HERO SECTION: Large banner area at top of page -->
-        <section class="hero">
-            <!-- HERO BACKGROUND: Video or image background -->
-            <div class="hero-video-container">
-                <!-- IMAGE OPTION: Background image -->
-                <div class="hero-image-bg" style="background-image: url('images/hero-bg-owl.png');">
-                    <!-- GRADIENT OVERLAY: Blue gradient over background -->
-                    <!--<div class="hero-gradient-bg"></div>-->
-                </div>
-                <!-- DARK OVERLAY: Improves text readability -->
-                <div class="hero-overlay"></div>
-            </div>
-            
-            <!-- HERO CONTENT: Main content over background -->
-            <div class="hero-container">
-                <!-- LEFT SIDE: Text content and buttons -->
-                <div class="hero-content">
-                    <!-- HERO TITLE: Main headline (split into two lines for animation) -->
-                    <h1 class="hero-title">
-                        <span class="line-1">Gain a Finance and Strategy Professional</span>
-                        <span class="line-2">In <span class="gradient-text">Your Corner</span></span>
-                    </h1>
-                    <!-- HERO DESCRIPTION: Subtitle explaining value proposition -->
-                    <p class="hero-description">
-                        Owl Finance & Strategy Consulting provides the actionable insights you need to succeed.
-                    </p>
-                    <!-- CALL-TO-ACTION BUTTONS: Primary and secondary actions -->
-                    <div class="cta-container">
-                        <a href="#contact" class="cta-button cta-primary">
-                            <span class="cta-icon">🚀</span>
-                            Ready to Launch?
-                        </a>
-                        <a href="#services" class="cta-button cta-secondary">
-                            <span class="cta-icon">💼</span>
-                            Our Services
-                        </a>
-                    </div>
-                </div>
-                <!-- RIGHT SIDE: Floating cards (hidden on mobile) -->
-                <div class="hero-visual">
-                    <div class="hero-card-stack">
-                        <!-- FOUR FLOATING CARDS: Show different service areas -->
-                        <div class="hero-card card-1">
-                            <div class="card-icon">🦉</div>
-                            <h3>Partner in Growth</h3>
-                        </div>
-                        <div class="hero-card card-2">
-                            <div class="card-icon">📈</div>
-                            <h3>Financial Insights</h3>
-                        </div>
-                        <div class="hero-card card-3">
-                            <div class="card-icon">🧭</div>
-                            <h3>Strategy Guidance</h3>
-                        </div>
-                        <div class="hero-card card-4">
-                            <div class="card-icon">🤝</div>
-                            <h3>Investor Relations</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-    <!-- TRANSFORMATION SECTION: Main container for the simplified storytelling section -->
-    <!-- This creates a clean, grid-based layout without connecting elements -->
-        <section class="transformation-section">
-            
-            <!-- FLOATING SHAPES: Subtle animated background decorations -->
-            <!-- These create visual interest without interfering with content -->
-            <div class="floating-shapes">
-                <div class="shape"></div>  <!-- Shape 1: Top-left animated circle -->
-                <div class="shape"></div>  <!-- Shape 2: Bottom-right animated circle -->
-                <div class="shape"></div>  <!-- Shape 3: Center-left animated circle -->
-            </div>
-            
-            <!-- SECTION CONTAINER: Centers content and sets maximum width -->
-            <!-- Uses your existing container class for consistent spacing -->
-            <div class="section-container">
-                
-                <!-- SECTION HEADER: Title and subtitle for the entire section -->
-                <!-- Standard section header following your site's pattern -->
-                <div class="section-header">
-                    <h2>Transform your Entreprenurial Journey</h2>  <!-- Main section title -->
-                    <!--<p class="section-subtitle">Every successful founder follows this same journey from financial chaos to strategic mastery—let us guide you through yours</p>-->  <!-- Descriptive subtitle -->
-                </div>
+  <!-- FONTS + MAIN STYLES -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style/style.css">
 
-                <!-- STEP 1: First transformation step - Problem phase -->
-                <!-- Grid row with text on LEFT, image on RIGHT -->
-                <div class="transformation-row">
-                    
-                    <!-- TEXT CONTENT: Left column with step information -->
-                    <!-- Contains icon, title, description, and emotion indicator -->
-                    <div class="text-content">
-                        <!--<div class="step-icon">😰</div>-->  <!-- Large emoji showing emotional state -->
-                        <h3 class="step-title">Do you sometimes feel overhlemed?</h3>  <!-- Step heading -->
-                        <!-- Step description: Explains the problem founders face -->
-                        <p class="step-description">"What's my burn?" "How much money should I raise?" "What information should I give my investors?" "How does my value proposition compare to that of my competitors?"</p>
-                        <!-- Emotion badge: Shows how founder feels in this state -->
-                        <!--<div class="step-emotion">Overwhelmed & Scattered</div>-->
-                    </div>
-                    
-                    <!-- IMAGE CONTENT: Right column with floating image card -->
-                    <!-- Contains the visual representation of this step -->
-                    <div class="image-content">
-                        <!-- FLOATING IMAGE CARD: Clean container for step image -->
-                        <!-- No borders or extra elements - just floating shadow effect -->
-                        <div class="floating-image-card">
-                            <img src="images/stressed-founder.png" alt="Overwhelmed Founder" class="step-image">
-                        </div>
-                    </div>
-                </div>
+<!-- Feather Icons -->
+<script src="https://unpkg.com/feather-icons" defer></script>
+<script defer>feather.replace();</script>
+</head>
+<body>
 
-                <!-- STEP 2: Second transformation step - Solution phase -->
-                <!-- Grid row with image on LEFT, text on RIGHT (reverse class changes order) -->
-                <div class="transformation-row reverse">
-                    
-                    <!-- IMAGE CONTENT: Left column with floating image card -->
-                    <!-- Note: This comes first in HTML but CSS will position it correctly -->
-                    <div class="image-content">
-                        <div class="floating-image-card">
-                            <!-- IMAGE PLACEHOLDER: Professional consultation scene -->
-                            <img src="images/confident-founder.png" alt="Confident Founder" class="step-image">
-                        </div>
-                    </div>
-                    
-                    <!-- TEXT CONTENT: Right column with step information -->
-                    <!-- Contains the solution/partnership messaging -->
-                    <div class="text-content">
-                        <!--<div class="step-icon">🤝</div>-->  <!-- Handshake emoji for partnership -->
-                        <h3 class="step-title">Gain the clarity you need.</h3>  <!-- Solution step title -->
-                        <!-- Description: How your service helps solve the problem -->
-                        <p class="step-description">We partner with you to provide clear and actionable insights that focus on finance and strategy.</p>
-                        <!-- Emotion indicator: Relief and support -->
-                        <!--<div class="step-emotion">Supported & Guided</div>-->
-                    </div>
-                </div>
+  <!-- NAVBAR -->
+  <nav id="navbar" role="navigation" aria-label="Main">
+    <div class="section-container nav-wrapper">
+      <a href="#" class="logo"><img src="images/logo-dbg.png" alt="Logo" style="height: 2em; vertical-align: middle; margin-right: 0.5em;">Owl Finance &amp; Strategy Consulting</a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#testimonial">Testimonials</a></li>
+        <li><a href="https://calendly.com/owl-consulting/free-consultation" class="nav-cta" target="_blank" rel="noopener">Schedule a Call</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </nav>
 
-                <!-- STEP 3: Third transformation step - Success phase -->
-                <!-- Grid row with text on LEFT, image on RIGHT (same as step 1) -->
-                <div class="transformation-row">
-                    
-                    <!-- TEXT CONTENT: Left column with success messaging -->
-                    <!-- Shows the final positive outcome -->
-                    <div class="text-content">
-                        <!--<div class="step-icon">🚀</div>-->  <!-- Rocket emoji for growth/success -->
-                        <h3 class="step-title">Together, we'll find the best solution for you.</h3>  <!-- Success step title -->
-                        <!-- Description: Benefits and final outcome -->
-                        <p class="step-description">Financial models? We got 'em! Investor memos? Yea, we can help! Market sizing? No problem! Company valuation? Of course!</p>
-                        <!-- Final emotional state: Confidence and empowerment -->
-                    <!--<div class="step-emotion">Confident & Empowered</div>-->
-                    </div>
-                    
-                    <!-- IMAGE CONTENT: Right column with success image -->
-                    <!-- Shows confident, successful founder -->
-                    <div class="image-content">
-                        <div class="floating-image-card">
-                            <!-- IMAGE PLACEHOLDER: Confident founder scene -->
-                            <div class="image-placeholder">
-                                Confident founder<br>
-                                presenting to investors<br>
-                                with complete confidence
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SIMPLIFIED CALL TO ACTION: Clean, focused CTA section -->
-                <!-- Removed metrics cards, streamlined for simplicity -->
-                <div class="simple-cta">
-                    <h3 class="cta-title">Ready to Transform Your Journey?</h3>  <!-- Action-oriented headline -->
-                    <p class="cta-text">Schedule a quick 30-minute call to find out how we can help!</p>  <!-- Supporting text -->
-                    <!-- CTA BUTTON: Links to contact section -->
-                    <a href="#contact" class="cta-button">Let's Talk</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- SERVICES SECTION: Main content about service offerings -->
-        <section class="services" id="services">
-        <div class="section-container">
-
-            <!-- FRACTIONAL CFO SERVICES: First service category -->
-            <div class="section-header fade-in">
-            <h2>Fractional CFO</h2>
-            <p>Your part-time CFO, ideal for early-stage startups.</p>
-            </div>
-            <div class="services-grid cfo-grid">
-            
-            <!-- Launch TIER: Basic CFO package -->
-            <div class="service-card fade-in">
-                <!--<div class="service-icon">⚙️</div>-->                    <!-- Service icon -->
-                <h3>Launch</h3>                                   <!-- Service name -->
-                <p>Lean support to set strong foundations—ideal for MVP through pre-seed.</p> <!-- Description -->
-                <ul class="service-features">                         <!-- Feature list -->
-                <li>Revenue & expense tracker</li>
-                <li>Basic KPI dashboard (burn, runway, CAC, and sector specific)</li>
-                <li>Business model canvas</li>
-                <li>Monthyly call + unlimited email/messaging support</li>
-                <li>And much more!</li>
-                </ul>
-                <a href="#contact" class="service-link">Let's talk →</a> <!-- CTA link -->
-            </div>
-
-            <!-- GROWTH TIER: Mid-level CFO package -->
-            <div class="service-card fade-in">
-                <!--<div class="service-icon">🌱</div>-->
-                <h3>Growth</h3>
-                <p>Hands-on finance partner as you hire, raise, and accelerate.</p>
-                <ul class="service-features">
-                <li>Everything from Launch</li>
-                <li>Three-statement financial model</li>
-                <li>Fundraising support (SAFE agreement review, data room construction, pitch review, etc.)</li>
-                <li>Monthly investor update materials</li>
-                <li>And much more!</li>
-                </ul>
-                <a href="#contact" class="service-link">Let's talk →</a>
-            </div>
-
-            <!-- SCALE TIER: Premium CFO package -->
-            <div class="service-card fade-in">
-                <!--<div class="service-icon">🚀</div>-->
-                <h3>Scale</h3>
-                <p>The reliable partner to support your scaling operations.</p>
-                <ul class="service-features">
-                <li>Everything from Growth</li>
-                <li>Quarterly company valuation</li>
-                <li>Monthly investor reports</li>
-                <li>Board meeting materials and preparation</li>
-                <li>And much more!</li>
-                </ul>
-                <a href="#contact" class="service-link">Let's talk →</a>
-            </div>
-            </div>
-
-            <!-- CONSULTING & ADVISORY: Second service category -->
-            <div class="section-header fade-in" style="margin-top:120px">
-            <h2>Other Services</h2>
-            <p> </p>
-            </div>
-
-            <div class="services-grid advisory-grid">
-            <!-- CONSULTING SPRINTS: Project-based work -->
-            <div class="service-card fade-in">
-                <!--<div class="service-icon">📊</div>-->
-                <h3>Consulting Sprints</h3>
-                <p>Your go-to partner for targeted financial or strategic projects—clearing blockers so you can move forward faster.</p>
-                <ul class="service-features">
-                <li>Financial models</li>
-                <li>Market research</li>
-                <li>Company valuations</li>
-                <li>Funding readiness audits</li>
-                <li>And much more!</li>
-                </ul>
-                <a href="#contact" class="service-link">Let's talk →</a>
-            </div>
-
-            <!-- ADVISORY: Ongoing strategic support -->
-            <div class="service-card fade-in">
-                <!--<div class="service-icon">🎯</div>-->
-                <h3>Advisory</h3>
-                <p>Your sounding board and partner who asks the hard questions and helps you make confident, faster decisions.</p>
-                <ul class="service-features">
-                <li>Light-touch strategic support</li>
-                <li>Deep dive into your financials</li>
-                <li>Optional board observer</li>
-                <li>Monthly advisory call</li>
-                <li>And much more!</li>
-                </ul>
-                <a href="#contact" class="service-link">Let's talk →</a>
-            </div>
-
-            <!-- PITCH & POLISH: Presentation coaching -->
-            <div class="service-card fade-in">
-                <!--<div class="service-icon">🗣️</div>-->
-                <h3>Pitch & Polish</h3>
-                <p>Simulate your pitch to investors and receive actionable feedback.</p>
-                <ul class="service-features">
-                <li>Pitch deck structure review</li>
-                <li>Prepare for investor questions</li>
-                <li>Learn to engage your potential investors</li>
-                <li>Optional follow-up sessions</li>
-                </ul>
-                <a href="#contact" class="service-link">Book a session →</a>
-            </div>
-            </div>
-
+  <!-- HERO -->
+  <header class="hero gradient-bg" id="top">
+    <div class="section-container hero-content">
+      <h1><span class="accent">Owl Finance & Strategy Consulting</span></h1>
+      <div class="hero-bottom">
+        <p class="hero-subtitle">Your Partner in Growth</p>
+        <div class="hero-cards-grid">
+          <div class="hero-card">
+            <img src="images/growth-catalyst.jpg" alt="Expert Guidance" width="48" height="48" loading="lazy">
+            <h3>Growth Catalyst</h3>
+          </div>
+          <div class="hero-card">
+            <img src="images/financial-roadmap.jpg" alt="Investor Ready" width="48" height="48" loading="lazy">
+            <h3>Financial Roadmap</h3>
+          </div>
+          <div class="hero-card">
+            <img src="images/strategic-blueprint.jpg" alt="Flexible Support" width="48" height="48" loading="lazy">
+            <h3>Strategic Blueprint</h3>
+          </div>
+          <div class="hero-card">
+            <img src="images/investor-clarity.jpg" alt="Founder Focused" width="48" height="48" loading="lazy">
+            <h3>Investor Clarity</h3>
+          </div>
         </div>
-        </section>
+        <a href="https://calendly.com/owl-consulting/free-consultation" class="cta-primary" target="_blank" rel="noopener">🚀 Schedule a Call</a>
+      </div>
+    </div>
+  </header>
 
-        <!-- BENEFITS SECTION: Why choose us -->
-        <section class="benefits" id="benefits">
-            <div class="section-container">
-                <!-- SECTION HEADER: Title and description -->
-                <div class="section-header fade-in">
-                    <h2>Why Partner With Owl Finance & Strategy Consulting?</h2>
-                    <p>Startup‑ready financial and strategic leadership—no full‑time overhead.</p>
-                </div>
-                <!-- BENEFITS GRID: List of numbered benefits -->
-                <div class="benefits-grid">
-                    <!-- BENEFIT 1: Cost-effective expertise -->
-                    <div class="benefit-card slide-in-left">
-                        <div class="benefit-number">01</div>              <!-- Large number -->
-                        <div class="benefit-content">
-                            <h3>C‑Suite-Level Expertise, Fractional Price</h3>
-                            <p>Get seasoned insight without the six‑figure salary.</p>
-                        </div>
-                    </div>
-                    <!-- BENEFIT 2: Stage-appropriate guidance -->
-                    <div class="benefit-card slide-in-right">
-                        <div class="benefit-number">02</div>
-                        <div class="benefit-content">
-                            <h3>Stage‑Smart Guidance</h3>
-                            <p>We tailor our service to your company's stage and needs.</p>
-                        </div>
-                    </div>
-                    <!-- BENEFIT 3: Actionable insights -->
-                    <div class="benefit-card slide-in-left">
-                        <div class="benefit-number">03</div>
-                        <div class="benefit-content">
-                            <h3>Actionable Insights</h3>
-                            <p>We focus our insights and analysis to provide you with decision-making tools.</p>
-                        </div>
-                    </div>
-                    <!-- BENEFIT 4: Professional financials -->
-                    <div class="benefit-card slide-in-right">
-                        <div class="benefit-number">04</div>
-                        <div class="benefit-content">
-                            <h3>Professional Deliverables</h3>
-                            <p>We maintain the highest quality, suitable for the most professional investors.</p>
-                        </div>
-                    </div>
-                    <!-- BENEFIT 5: True partnership -->
-                    <div class="benefit-card slide-in-left">
-                        <div class="benefit-number">05</div>
-                        <div class="benefit-content">
-                            <h3>Embedded Growth Partner</h3>
-                            <p>We plug into your management structure, anticipating roadblocks and co‑owning outcomes.</p>
-                        </div>
-                    </div>
-                    <!-- BENEFIT 6: Fast implementation -->
-                    <!--<div class="benefit-card slide-in-right">
-                        <div class="benefit-number">06</div>
-                        <div class="benefit-content">
-                            <h3>Frameworks That Ship Fast</h3>
-                            <p>Battle‑tested templates and automations go live in days, not months—because every week counts.</p>
-                        </div>
-                    </div>-->
-                </div>
-                <!-- BENEFITS CTA: Call-to-action after benefits -->
-                <div class="benefits-cta fade-in">
-                    <h3>Ready to accelerate your growth with expert financial leadership?</h3>
-                    <a href="#contact" class="cta-button cta-primary">
-                        <span class="cta-icon">💬</span>
-                        Lets's talk
-                    </a>
-                </div>
-            </div>
-        </section>
 
-        <!-- ABOUT SECTION: Company information and values -->
-        <section class="about" id="about">
-            <div class="about-container">
-                <!-- LEFT SIDE: Text content -->
-                <div class="about-content slide-in-left">
-                    <h2>Demystifying Finance for Ambitious Founders</h2>
-                    <!-- COMPANY DESCRIPTION: Multiple paragraphs explaining the company -->
-                    <p>
-                        At Owl Finance & Strategy Consulting, we understand that great ideas need great financial strategy to succeed. We bridge the gap between vision and execution by providing the financial expertise that transforms startups into scalable businesses.
-                    </p>
-                    <p>
-                        Our approach combines deep financial acumen with startup agility. We've walked in your shoes and understand the unique challenges of building something from nothing. That's why we don't just provide services – we become your strategic financial partner.
-                    </p>
-                    <p>
-                        Whether you're preparing for your first investor meeting or optimizing operations for scale, we bring the expertise, frameworks, and hands-on support needed to navigate each critical milestone with confidence.
-                    </p>
-                    <!-- COMPANY VALUES: List of core values -->
-                    <div class="about-values">
-                        <div class="value-item">
-                            <div class="value-icon">🎯</div>         <!-- Value icon -->
-                            <div class="value-content">
-                                <h4>Strategic Focus</h4>            <!-- Value name -->
-                                <p>Every recommendation is aligned with your long-term vision and immediate goals.</p> <!-- Value description -->
-                            </div>
-                        </div>
-                        <div class="value-item">
-                            <div class="value-icon">📊</div>
-                            <div class="value-content">
-                                <h4>Data-Driven</h4>
-                                <p>We base decisions on solid financial analysis and market insights, not assumptions.</p>
-                            </div>
-                        </div>
-                        <div class="value-item">
-                            <div class="value-icon">🤝</div>
-                            <div class="value-content">
-                                <h4>True Partnership</h4>
-                                <p>Your success is our success. We're invested in your journey from day one.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- RIGHT SIDE: Image/visual -->
-                <div class="about-visual slide-in-right">
-                    <!-- DECORATIVE ELEMENTS: Floating circles around image -->
-                    <div class="about-decoration decoration-1"></div>
-                    <div class="about-decoration decoration-2"></div>
-                    <!-- IMAGE CONTAINER: Holds professional image -->
-                    <div class="about-image-container">
-                        <div class="about-image-placeholder">
-                            <!-- ACTUAL IMAGE: Hidden until image file is provided -->
-                            <img src="your-professional-image.jpg" alt="Financial Strategy Meeting" style="width: 100%; height: 100%; object-fit: cover;">
-                            <!-- PLACEHOLDER CONTENT: Shows when no image is provided -->
-                            <div class="image-placeholder-content">
-                                <span>📈</span>                    <!-- Large icon -->
-                                <p>Strategic Financial Leadership</p> <!-- Placeholder text -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- FOUNDER JOURNEY -->
+  <section class="journey" id="journey">
+    <div class="section-header">
+        <h2>How we Help Founders</h2>
+    </div>
+    <div class="journey-carousel-wrapper">
+      <button class="journey-arrow left" aria-label="Scroll left" type="button">&#8592;</button>
+      <div class="section-container journey-grid">
+        <div class="journey-step">
+        <img src="images/stressed-founder.png" alt="Founder stressed over complex spreadsheet" loading="lazy">
+        <h3>Feeling Overwhelmed</h3>
+        <p>You’re buried in burn-rate spreadsheets and investor questions.</p>
+      </div>
+        <div class="journey-step">
+        <img src="images/confident-founder.png" alt="Founder confidently reviewing a streamlined dashboard" loading="lazy">
+        <h3>Clarity &amp; Control</h3>
+        <p>We clean up the numbers and hand you an investor-ready dashboard.</p>
+      </div>
+        <div class="journey-step">
+        <img src="images/dilligent-founder.png" alt="Founder focused on product development" loading="lazy">
+        <h3>Focus on What Matters</h3>
+        <p>You get back to building while we handle the finance story.</p>
+      </div>
+      </div>
+      <button class="journey-arrow right" aria-label="Scroll right" type="button">&#8594;</button>
+    </div>
+  </section>
+  <!-- METRICS CARDS ROW -->
+  <section class="metrics-row gradient-bg" aria-label="Key Metrics">
+    <div class="section-container metrics-cards-grid">
+      <div class="metrics-card">
+        <div class="metrics-value">29%</div>
+        <div class="metrics-label">of startups run out of money</div>
+      </div>
+      <div class="metrics-card">
+        <div class="metrics-value">30+</div>
+        <div class="metrics-label">Startups Supported</div>
+      </div>
+      <div class="metrics-card">
+        <div class="metrics-value">15+</div>
+        <div class="metrics-label">Industries Served</div>
+      </div>
+      <div class="metrics-card">
+        <div class="metrics-value">10+ yrs</div>
+        <div class="metrics-label">Experience</div>
+      </div>
+    </div>
+  </section>
 
-        <!-- CONTACT SECTION: Contact form and information -->
-        <section class="contact" id="contact">
-            <div class="contact-container">
-                <!-- CONTACT HEADER: Section title and description -->
-                <div class="contact-header fade-in">
-                    <h2>Ready to Transform Your Vision?</h2>
-                    <p>Let's discuss how we can help you build, launch, and scale your startup with confidence.</p>
-                </div>
-                <!-- CONTACT GRID: Two-column layout -->
-                <div class="contact-grid">
-                    <!-- LEFT SIDE: Contact information -->
-                    <div class="contact-info slide-in-left">
-                        <!-- EMAIL CONTACT: Email address -->
-                        <div class="contact-item">
-                            <div class="contact-icon">📧</div>      <!-- Email icon -->
-                            <div class="contact-details">
-                                <h3>Email Us</h3>                  <!-- Contact method -->
-                                <p>hello@owlfinancestrategy.com</p> <!-- Contact details -->
-                            </div>
-                        </div>
-                        <!-- PHONE CONTACT: Phone number -->
-                        <div class="contact-item">
-                            <div class="contact-icon">📱</div>
-                            <div class="contact-details">
-                                <h3>Call Us</h3>
-                                <p>+1 (555) 123-4567</p>
-                            </div>
-                        </div>
-                        <!-- ADDRESS CONTACT: Physical location -->
-                        <div class="contact-item">
-                            <div class="contact-icon">📍</div>
-                            <div class="contact-details">
-                                <h3>Visit Us</h3>
-                                <p>123 Innovation Drive<br>Silicon Valley, CA 94025</p>
-                            </div>
-                        </div>
-                        <!-- HOURS CONTACT: Office hours -->
-                        <div class="contact-item">
-                            <div class="contact-icon">🕐</div>
-                            <div class="contact-details">
-                                <h3>Office Hours</h3>
-                                <p>Monday - Friday<br>9:00 AM - 6:00 PM PST</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- RIGHT SIDE: Contact form -->
-                    <div class="contact-form slide-in-right">
-                        <!-- NAME FIELD: User's name -->
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="John Doe" required>
-                        </div>
-                        <!-- EMAIL FIELD: User's email -->
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                        </div>
-                        <!-- MESSAGE FIELD: User's message -->
-                        <div class="form-group">
-                            <label for="message">Tell Us About Your Vision</label>
-                            <textarea id="message" name="message" placeholder="I have an idea for..." required></textarea>
-                        </div>
-                        <!-- SUBMIT BUTTON: Sends the form -->
-                        <button type="submit" class="form-submit">Send Message</button>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-container">
 
-        <!-- FOOTER: Bottom section with copyright and social links -->
-        <footer>
-            <div class="footer-content">
-                <!-- COPYRIGHT: Company ownership -->
-                <p>&copy; 2024 Owl Finance & Strategy Consulting. Empowering entrepreneurs worldwide.</p>
-                <p>Transforming visions into successful ventures, one startup at a time.</p>
-                <!-- SOCIAL MEDIA LINKS: Icons for social platforms -->
-                <div class="social-links">
-                    <a href="#" aria-label="LinkedIn">in</a>  <!-- LinkedIn -->
-                    <a href="#" aria-label="Twitter">𝕏</a>     <!-- Twitter/X -->
-                    <a href="#" aria-label="Email">@</a>      <!-- Email -->
-                </div>
-            </div>
-        </footer>
+      <!-- FRACTIONAL CFO -->
+      <div class="section-header">
+        <h2>Fractional CFO</h2>
+        <p>Your part-time CFO, ideal for early-stage startups.</p>
+      </div>
+      <div class="services-grid cfo-grid">
+        <div class="service-card">
+          <h3>Launch</h3>
+          <p>Lean support to set strong foundations—ideal for MVP through pre-seed.</p>
+          <ul>
+            <li>Revenue &amp; expense tracker</li>
+            <li>Basic KPI dashboard (burn, runway, CAC)</li>
+            <li>Business model canvas</li>
+            <li>Monthly call + unlimited Slack/email</li>
+          </ul>
+          <div class="service-price"><span class="service-price-prefix">starting at</span> <span class="price-value">$1,750</span><span class="service-price-suffix">/month</span></div>
+          <a href="https://calendly.com/owl-consulting/free-consultation" class="cta-link" target="_blank" rel="noopener">Schedule a Call →</a>
+        </div>
+        <div class="service-card">
+          <h3>Growth</h3>
+          <p>Hands-on finance partner as you hire, raise, and accelerate.</p>
+          <ul>
+            <li>Everything in Launch</li>
+            <li>Three-statement model</li>
+            <li>Fundraising support &amp; data room</li>
+            <li>Monthly investor update materials</li>
+          </ul>
+          <div class="service-price"><span class="service-price-prefix">starting at</span> <span class="price-value">$3,250</span><span class="service-price-suffix">/month</span></div>
+          <a href="https://calendly.com/owl-consulting/free-consultation" class="cta-link" target="_blank" rel="noopener">Schedule a Call →</a>
+        </div>
+        <div class="service-card">
+          <h3>Scale</h3>
+          <p>Reliable partner to support your scaling operations.</p>
+          <ul>
+            <li>Everything in Growth</li>
+            <li>Quarterly valuation</li>
+            <li>Board materials &amp; prep</li>
+            <li>Monthly investor reports</li>
+          </ul>
+          <div class="service-price"><span class="service-price-prefix">starting at</span> <span class="price-value">$5,000</span><span class="service-price-suffix">/month</span></div>
+          <a href="https://calendly.com/owl-consulting/free-consultation" class="cta-link" target="_blank" rel="noopener">Schedule a Call →</a>
+        </div>
+      </div>
 
-        <!-- JAVASCRIPT FILE: Link to your separate script file -->
-        <script src="js/js.js"></script>
-    </body>
-    </html>
+      <!-- COMPARISON TABLE -->
+      <h3 class="table-heading">Compare Tiers at a Glance</h3>
+      <table class="comparison-table" aria-label="Fractional CFO plan comparison">
+        <thead>
+          <tr><th scope="col">Features</th><th scope="col">Launch</th><th scope="col">Growth</th><th scope="col">Scale</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="feature-col">Dedicated fractional CFO</td><td></td><td></td><td></td></tr>
+          <tr><td class="feature-col">Three-statement model</td><td></td><td></td><td></td></tr>
+          <tr><td class="feature-col">Quarterly valuation</td><td></td><td></td><td></td></tr>
+          <tr><td class="feature-col">Monthly investor materials</td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+
+      <!-- OTHER SERVICES -->
+      <div class="section-header other-services-header">
+        <h2>Other Services</h2>
+      </div>
+
+        <div class="services-grid advisory-grid">
+        <div class="service-card">
+          <h3>Consulting Sprints</h3>
+          <p>Targeted financial or strategic projects—clearing blockers fast.</p>
+          <ul>
+            <li>Financial models</li>
+            <li>Market research</li>
+            <li>Company valuations</li>
+            <li>Funding readiness audits</li>
+          </ul>
+          <div class="service-price"><span class="service-price-prefix">starting at</span> <span class="price-value">$1,000</span><span class="service-price-suffix">/project</span></div>
+          <a href="https://calendly.com/owl-consulting/free-consultation" class="cta-link" target="_blank" rel="noopener">Schedule a Call →</a>
+        </div>
+        <div class="service-card">
+          <h3>Advisory</h3>
+          <p>Your sounding board and partner for confident decisions.</p>
+          <ul>
+            <li>Light-touch strategic support</li>
+            <li>Deep dive into your financials</li>
+            <li>Optional board observer</li>
+            <li>Monthly advisory call</li>
+          </ul>
+          <div class="service-price"><span class="service-price-prefix">starting at</span> <span class="price-value">$300</span><span class="service-price-suffix">/month</span></div>
+          <a href="https://calendly.com/owl-consulting/free-consultation" class="cta-link" target="_blank" rel="noopener">Schedule a Call →</a>
+        </div>
+        <div class="service-card">
+          <h3>Pitch &amp; Polish</h3>
+          <p>Simulate your pitch to investors and receive actionable feedback.</p>
+          <ul>
+            <li>Pitch-deck structure review</li>
+            <li>Prepare for investor questions</li>
+            <li>Engage potential investors</li>
+            <li>Optional follow-up sessions</li>
+          </ul>
+          <div class="service-price"><span class="service-price-prefix"></span> <span class="price-value">$250</span><span class="service-price-suffix">/session</span></div>
+          <a href="https://calendly.com/owl-consulting/pitch-and-polish" class="cta-link" target="_blank" rel="noopener">Book a Session →</a>
+        </div>
+      </div><!-- /.services-grid -->
+    </div><!-- /.section-container -->
+  </section><!-- /#services -->
+
+  <!-- ABOUT MAU -->
+  <section class="about gradient-bg" id="about">
+    <div class="section-header">
+        <h2>About Mauricio "Mau" Arellano</h2>
+    </div>
+    <div class="section-container about-grid">
+      <div class="about-content">
+        <!--<h3>“I am passionate about helping people succeed, achieve their dreams, and gain financial independence.”</h3>-->
+        <h4>Why did you start Owl Finance & Strategy Consulting?</h4>
+        <p>I am passionate about empowering individuals. With the professional world in perpetual change, entrepreneurship gives entrepreneurs the ability to gain agency and independance. My job is to ensure they have the right tools and insights to succeed.</p>
+        <h4>What differentiated experience do you have that will add value to your clients?</h4>
+        <p>I offer strategic and financial advice to Ohana, the first microfinancing company to drive social and economic development for Mexican families through binational microloans. It offers an alternative to remittances that strengthens communities and promotes financial inclusion.</p>
+        <p>In my previous life, I was an accomplished equity research and corporate strategy expert specializing in transforming insights into actionable investment theses. My professional journey is underpinned by nearly a decade of experience, during which I honed the intricacies of performing financial analyses, executing equity valuations, and developing corporate strategies.</p>
+      <div class="about-linkedin">
+        <a href="https://www.linkedin.com/in/mau-arellano" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="30" height="30" fill="currentColor" class="linkedin-logo"><rect width="32" height="32" rx="6" fill="#0A66C2"/><path d="M24 24h-3.555v-5.568c0-1.328-.024-3.037-1.85-3.037-1.85 0-2.133 1.445-2.133 2.938V24H13V13h3.414v1.507h.049c.476-.9 1.637-1.85 3.37-1.85 3.604 0 4.27 2.37 4.27 5.455V24zM8.667 11.492a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM10.444 24H6.889V13h3.555v11z" fill="#fff"/></svg>
+        </a>
+      </div>
+      </div>
+      <div class="about-visual">
+        <img src="images/mau-headshot.JPG" alt="Mauricio Arellano headshot">
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial-section gradient-bg" id="testimonial">
+    <div class="section-header">
+        <h2>Testimonials</h2>
+    </div>
+    <div class="section-container">
+      <p class="testimonial-quote">
+        “<strong>Mauricio, through Owl Finance &amp; Strategy Consulting</strong>,
+        blends analytical thinking, strategic leadership, and a deep commitment
+        to purpose-driven growth.”
+      </p>
+      <div class="testimonial-client">
+        <img src="images/ohana-logo.png" alt="Ohana logo" class="client-logo">
+        <span class="client-name">
+          Victoria Díaz-Cuervo, CEO — 
+          <a href="https://www.ohanaby.com/" target="_blank" rel="noopener">Ohana</a>
+        </span>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-header">
+        <h2>Ready to Transform your Vision?</h2>
+    </div>
+    <div class="section-container contact-center">
+      <p>Schedule a call and discover how we can accelerate your growth.</p>
+      <a href="https://calendly.com/owl-consulting/free-consultation"
+         class="cta-primary" target="_blank" rel="noopener">🚀 Schedule a Call</a>
+      <div class="contact-divider"><span>or</span></div>
+      <p>Send us a message and we’ll get back to you within 24 hours.</p>
+      <!-- Contact Form -->
+      <form class="contact-form" action="#" method="post" style="margin-top:2rem;max-width:500px;margin-left:auto;margin-right:auto;">
+
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" required placeholder="First Name">
+
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" required placeholder="Last Name">
+
+          <label for="companyName">Company Name</label>
+          <input type="text" id="companyName" name="companyName" placeholder="Company Name">
+
+          <label for="companyWebsite">Company Website</label>
+          <input type="url" id="companyWebsite" name="companyWebsite" placeholder="Company Website">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="Your Email">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+
+          <button type="submit" class="cta-primary">Send Message</button>
+        </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2024 Owl Finance &amp; Strategy Consulting. Empowering entrepreneurs worldwide.</p>
+    <p><a href="#top">Back to top ↑</a></p>
+  </footer>
+
+  <!-- JS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script src="js/js.js" defer></script>
+
+
+  <!-- Google Analytics (placeholder) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+ 
+</body>
+<script src="js/main.js"></script>
+</html>
