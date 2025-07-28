@@ -295,17 +295,36 @@
       <div class="contact-divider"><span>or</span></div>
       <p>Send us a message and we’ll get back to you within 24 hours.</p>
       <!-- Contact Form -->
-      <div style="margin-top:2rem;max-width:600px;margin-left:auto;margin-right:auto;">
-        <iframe 
-          src="https://docs.google.com/forms/d/e/1FAIpQLSeYQYsEZ_wGz7RoGjK0jiMnbCO9d5pAn0MNqOczr57CB4iitA/viewform?embedded=true" 
-          width="100%" 
-          height="800" 
-          frameborder="0" 
-          marginheight="0" 
-          marginwidth="0">
-          Loading…
-        </iframe>
-      </div>
+      <form class="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/success.html" style="margin-top:2rem;max-width:500px;margin-left:auto;margin-right:auto;">
+        
+        <!-- Hidden field for Netlify -->
+        <input type="hidden" name="form-name" value="contact" />
+        
+        <!-- Honeypot field to prevent spam -->
+        <p class="hidden">
+          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" required placeholder="First Name">
+
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" required placeholder="Last Name">
+
+          <label for="companyName">Company Name</label>
+          <input type="text" id="companyName" name="companyName" placeholder="Company Name">
+
+          <label for="companyWebsite">Company Website</label>
+          <input type="url" id="companyWebsite" name="companyWebsite" placeholder="Company Website">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="Your Email">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+
+          <button type="submit" class="cta-primary">Send Message</button>
+        </form>
     </div>
   </section>
 
