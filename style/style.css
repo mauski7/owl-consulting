@@ -384,7 +384,7 @@ a:hover{color:var(--clr-navy);}
 
 @media (max-width: 600px) {
   .hero h1 {
-    font-size: clamp(var(--fs-3xl), 8vw, var(--fs-5xl));
+    font-size: clamp(var(--fs-4xl), 9vw, var(--fs-6xl));
     -webkit-line-clamp: unset;
     line-clamp: unset;
     display: block;
@@ -452,7 +452,7 @@ a:hover{color:var(--clr-navy);}
 
 @media (max-width: 480px) {
   .hero p {
-    font-size: var(--fs-xl);
+    font-size: var(--fs-2xl);
   }
 }
 .hero .cta-primary {
