@@ -203,7 +203,7 @@ a:hover{color:var(--clr-navy);}
 .hero{
   padding:0 1rem;
   min-height:80vh;
-  /* background removed */
+  background: linear-gradient(180deg, #000033 0%, #7EB6FF 100%);
   text-align:center;
   color:var(--clr-white);
   display:flex;
