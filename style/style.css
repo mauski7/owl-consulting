@@ -496,7 +496,7 @@ a:hover{color:var(--clr-navy);}
 /* --- Journey Card/Step: Fixed Size, Responsive --- */
 /* --- Journey Card/Step: Proportional, Content Always Fits --- */
 .journey-step {
-  background: transparent;
+  background: var(--clr-white);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,.10);
   padding: 1.5rem 1rem 1.5rem 1rem;
@@ -516,6 +516,11 @@ a:hover{color:var(--clr-navy);}
   flex: 0 0 260px;
   scroll-snap-align: start;
   overflow: hidden;
+}
+.journey-step:hover {
+  transform: scale(1.03);
+  background: var(--clr-light);
+  box-shadow: 0 4px 12px rgba(0,0,0,.12), 0 10px 24px rgba(0,0,0,.08);
 }
 .journey-step img {
   width: 120px;
@@ -540,7 +545,7 @@ a:hover{color:var(--clr-navy);}
   box-shadow: 0 4px 12px rgba(0,0,0,.12), 0 10px 24px rgba(0,0,0,.08);
 }
 .journey-card {
-  background: transparent;
+  background: var(--clr-white);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 6px 16px rgba(0,0,0,.04);
   padding: 0.7rem 0.5rem 0.7rem 0.5rem;
@@ -560,6 +565,11 @@ a:hover{color:var(--clr-navy);}
   flex: 0 0 220px;
   scroll-snap-align: start;
   overflow: hidden;
+}
+.journey-card:hover {
+  transform: scale(1.03);
+  background: var(--clr-light);
+  box-shadow: 0 4px 12px rgba(0,0,0,.12), 0 10px 24px rgba(0,0,0,.08);
 }
 /* Clamp text in journey card/step to prevent overflow and scrollbars */
 .journey-step p,
