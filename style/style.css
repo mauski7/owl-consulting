@@ -533,9 +533,9 @@ a:hover{color:var(--clr-navy);}
   margin-bottom: .5rem;
   font-size: var(--fs-lg);
   color: #000;
-  background: transparent;
-  text-shadow: none;
-  box-shadow: none;
+  background: transparent !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
 }
 .journey-step p {
   font-size: var(--fs-base);
@@ -675,9 +675,9 @@ a:hover{color:var(--clr-navy);}
 .journey-card h3 {
   margin-bottom: .2rem;
   font-size: var(--fs-xs);
-  background: transparent;
-  text-shadow: none;
-  box-shadow: none;
+  background: transparent !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
 }
 .journey-card p {
   font-size: var(--fs-xs);
@@ -1210,8 +1210,9 @@ footer{
 }
 .journey-card h3 {
   font-size: var(--fs-2xl);
-  background: transparent;
-  box-shadow: none;
+  background: transparent !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
 }
 .journey-card h4,
 .journey-card h5,
