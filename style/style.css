@@ -1194,6 +1194,35 @@ input:focus,textarea:focus{outline:none;border-color:var(--clr-blue);}
   display: none;
 }
 
+/* Google Form Embed Styling */
+.contact-form iframe {
+  border: none !important;
+  background: transparent !important;
+}
+
+/* Attempt to override Google Form styles (limited effectiveness) */
+.contact-form iframe[src*="google.com"] {
+  filter: hue-rotate(0deg) saturate(1) brightness(1) contrast(1);
+}
+
+/* Custom container styling for better integration */
+.contact-form {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--clr-blue), var(--clr-navy));
+  border-radius: 12px 12px 0 0;
+  z-index: 1;
+}
+
 /* ─────────────── FOOTER ──────────────────────────────── */
 footer{
   background:var(--clr-navy);color:var(--clr-white);
