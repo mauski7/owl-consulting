@@ -282,7 +282,15 @@
       <div class="contact-divider"><span>or</span></div>
       <p>Send us a message and we’ll get back to you within 24 hours.</p>
       <!-- Contact Form -->
-      <form class="contact-form" id="contactForm" style="margin-top:2rem;max-width:500px;margin-left:auto;margin-right:auto;">
+      <form class="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/success.html" style="margin-top:2rem;max-width:500px;margin-left:auto;margin-right:auto;">
+        
+        <!-- Hidden field for Netlify -->
+        <input type="hidden" name="form-name" value="contact" />
+        
+        <!-- Honeypot field to prevent spam -->
+        <p class="hidden">
+          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+        </p>
 
           <label for="firstName">First Name</label>
           <input type="text" id="firstName" name="firstName" required placeholder="First Name">
