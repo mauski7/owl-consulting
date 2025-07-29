@@ -1234,7 +1234,7 @@ input:focus,textarea:focus{outline:none;border-color:var(--clr-blue);}
 }
 
 .accordion-block summary:hover {
-  background: rgba(0, 0, 0, 0.05);
+  background: #7eb6ff;
 }
 
 .accordion-block summary::-webkit-details-marker {
@@ -1242,20 +1242,23 @@ input:focus,textarea:focus{outline:none;border-color:var(--clr-blue);}
 }
 
 .accordion-block summary::before {
-  content: '▶';
-  display: inline-block;
-  margin-right: 0.5rem;
-  transition: transform var(--dur-slow) var(--easing);
-  color: var(--clr-blue);
+  content: '';
+  display: none;
 }
 
 .accordion-block[open] summary::before {
-  transform: rotate(90deg);
+  transform: none;
 }
 
 .accordion-block > *:not(summary) {
   padding: 1.5rem;
   background: white;
+}
+
+/* Align deliverable titles to the left */
+.accordion-block .comparison-table th:first-child,
+.accordion-block .comparison-table td:first-child {
+  text-align: left;
 }
 
 /* Attempt to override Google Form styles (limited effectiveness) */
