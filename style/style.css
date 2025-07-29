@@ -1215,6 +1215,49 @@ input:focus,textarea:focus{outline:none;border-color:var(--clr-blue);}
   background: transparent !important;
 }
 
+/* Accordion Block Styling */
+.accordion-block {
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--clr-gray);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-block summary {
+  background: var(--clr-light);
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  font-size: var(--fs-lg);
+  color: var(--clr-navy);
+  transition: background var(--dur-slow) var(--easing);
+  user-select: none;
+}
+
+.accordion-block summary:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.accordion-block summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-block summary::before {
+  content: '▶';
+  display: inline-block;
+  margin-right: 0.5rem;
+  transition: transform var(--dur-slow) var(--easing);
+  color: var(--clr-blue);
+}
+
+.accordion-block[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.accordion-block > *:not(summary) {
+  padding: 1.5rem;
+  background: white;
+}
+
 /* Attempt to override Google Form styles (limited effectiveness) */
 .contact-form iframe[src*="google.com"] {
   filter: hue-rotate(0deg) saturate(1) brightness(1) contrast(1);
