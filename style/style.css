@@ -1016,14 +1016,24 @@ a:hover{color:var(--clr-navy);}
   font-weight: 600;
   color: #181c22;
 }
-/* circle indicators */
+/* circle indicators - removed */
 .comparison-table td:not(.feature-col)::before{
-  content:"";display:inline-block;width:14px;height:14px;border-radius:50%;
+  content: none;
+  display: none;
 }
 
-.comparison-table td:nth-child(n+2)::before{margin-inline:auto;}
-.comparison-table td:empty::before{border:2px solid var(--clr-gray);}
-.comparison-table td:not(:empty)::before{background:var(--clr-blue);}
+.comparison-table td:nth-child(n+2)::before{
+  content: none;
+  display: none;
+}
+.comparison-table td:empty::before{
+  content: none;
+  display: none;
+}
+.comparison-table td:not(:empty)::before{
+  content: none;
+  display: none;
+}
 
 /* ─────────────── ABOUT MAU ─────────────────────────────- */
 .about{
