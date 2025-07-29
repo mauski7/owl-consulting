@@ -1224,7 +1224,7 @@ input:focus,textarea:focus{outline:none;border-color:var(--clr-blue);}
 /* Accordion Block Styling */
 .accordion-block {
   margin-bottom: 1.5rem;
-  border: 1px solid var(--clr-gray);
+  border: none;
   border-radius: 8px;
   overflow: hidden;
   max-width: 100%;
