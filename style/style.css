@@ -617,6 +617,21 @@ a:hover{color:var(--clr-navy);}
   margin-bottom: 1rem;
 }
 }
+
+/* Tablet Landscape - Center the carousel */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .journey-grid {
+    justify-content: center;
+    padding: 1rem 4vw 1rem 4vw;
+  }
+  
+  .journey-step,
+  .journey-card {
+    flex: 0 0 280px;
+    min-width: 280px;
+    max-width: 320px;
+  }
+}
 @media (max-width: 600px) {
   .journey-step,
   .journey-card {
