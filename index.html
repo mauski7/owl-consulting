@@ -295,18 +295,73 @@
       <div class="contact-divider"><span>or</span></div>
       <p>Send us a message and we’ll get back to you within 24 hours.</p>
       <!-- Contact Form -->
-      <div class="contact-form" style="margin-top:2rem;max-width:640px;margin-left:auto;margin-right:auto;background:var(--clr-light);border-radius:12px;padding:2rem;box-shadow:0 6px 24px rgba(0,0,0,0.10);">
-        <iframe 
-          src="https://docs.google.com/forms/d/e/1FAIpQLSelXwC5qeAUJKbPqRX4dn7CbAO5NfkF28HTLTXteTdgpsCMzg/viewform?embedded=true" 
-          width="100%" 
-          height="1087" 
-          frameborder="0" 
-          marginheight="0" 
-          marginwidth="0"
-          style="border-radius:8px;overflow:hidden;">
-          Loading…
-        </iframe>
-      </div>
+      <form class="contact-form custom-form" id="customContactForm" style="margin-top:2rem;max-width:640px;margin-left:auto;margin-right:auto;background:var(--clr-light);border-radius:12px;padding:2rem;box-shadow:0 6px 24px rgba(0,0,0,0.10);">
+        
+        <!-- Form Header -->
+        <div class="form-header" style="text-align:center;margin-bottom:2rem;">
+          <h3 style="color:var(--clr-navy);font-size:var(--fs-2xl);margin-bottom:0.5rem;">Get in Touch</h3>
+          <p style="color:var(--clr-navy);font-size:var(--fs-base);opacity:0.8;">Tell us about your needs and we'll get back to you within 24 hours.</p>
+        </div>
+
+        <!-- First Name Field -->
+        <div class="form-group" style="margin-bottom:1.5rem;">
+          <label for="firstName" style="display:block;margin-bottom:0.5rem;color:var(--clr-navy);font-weight:600;font-size:var(--fs-sm);">First Name *</label>
+          <input type="text" id="firstName" name="firstName" required 
+                 style="width:100%;padding:0.75rem;border:2px solid var(--clr-gray);border-radius:8px;font-size:var(--fs-base);transition:border var(--dur-slow) var(--easing);background:white;"
+                 placeholder="Your first name">
+        </div>
+
+        <!-- Last Name Field -->
+        <div class="form-group" style="margin-bottom:1.5rem;">
+          <label for="lastName" style="display:block;margin-bottom:0.5rem;color:var(--clr-navy);font-weight:600;font-size:var(--fs-sm);">Last Name *</label>
+          <input type="text" id="lastName" name="lastName" required 
+                 style="width:100%;padding:0.75rem;border:2px solid var(--clr-gray);border-radius:8px;font-size:var(--fs-base);transition:border var(--dur-slow) var(--easing);background:white;"
+                 placeholder="Your last name">
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group" style="margin-bottom:1.5rem;">
+          <label for="email" style="display:block;margin-bottom:0.5rem;color:var(--clr-navy);font-weight:600;font-size:var(--fs-sm);">Email *</label>
+          <input type="email" id="email" name="email" required 
+                 style="width:100%;padding:0.75rem;border:2px solid var(--clr-gray);border-radius:8px;font-size:var(--fs-base);transition:border var(--dur-slow) var(--easing);background:white;"
+                 placeholder="your@email.com">
+        </div>
+
+        <!-- Company Name Field -->
+        <div class="form-group" style="margin-bottom:1.5rem;">
+          <label for="companyName" style="display:block;margin-bottom:0.5rem;color:var(--clr-navy);font-weight:600;font-size:var(--fs-sm);">Company Name</label>
+          <input type="text" id="companyName" name="companyName" 
+                 style="width:100%;padding:0.75rem;border:2px solid var(--clr-gray);border-radius:8px;font-size:var(--fs-base);transition:border var(--dur-slow) var(--easing);background:white;"
+                 placeholder="Your company name">
+        </div>
+
+        <!-- Company Website Field -->
+        <div class="form-group" style="margin-bottom:1.5rem;">
+          <label for="companyWebsite" style="display:block;margin-bottom:0.5rem;color:var(--clr-navy);font-weight:600;font-size:var(--fs-sm);">Company Website</label>
+          <input type="url" id="companyWebsite" name="companyWebsite" 
+                 style="width:100%;padding:0.75rem;border:2px solid var(--clr-gray);border-radius:8px;font-size:var(--fs-base);transition:border var(--dur-slow) var(--easing);background:white;"
+                 placeholder="https://yourcompany.com">
+        </div>
+
+        <!-- Message Field -->
+        <div class="form-group" style="margin-bottom:2rem;">
+          <label for="message" style="display:block;margin-bottom:0.5rem;color:var(--clr-navy);font-weight:600;font-size:var(--fs-sm);">How Can We Help? *</label>
+          <textarea id="message" name="message" rows="5" required 
+                    style="width:100%;padding:0.75rem;border:2px solid var(--clr-gray);border-radius:8px;font-size:var(--fs-base);transition:border var(--dur-slow) var(--easing);background:white;resize:vertical;"
+                    placeholder="Tell us about your needs, challenges, or questions..."></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="cta-primary" 
+                style="width:100%;font-size:var(--fs-lg);padding:0.75rem 1rem;background:var(--clr-blue);color:white;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:background var(--dur-slow) var(--easing);">
+          📧 Send Message
+        </button>
+
+        <!-- Success Message (hidden by default) -->
+        <div id="formSuccess" style="display:none;margin-top:1rem;background:rgba(0,128,0,0.15);padding:1rem;border-radius:8px;color:#006400;text-align:center;">
+          <p style="margin:0;font-weight:600;">✅ Thank you! We'll get back to you within 24 hours.</p>
+        </div>
+      </form>
     </div>
   </section>
 
