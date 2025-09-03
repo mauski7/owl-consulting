@@ -20,12 +20,28 @@ function initializeJourneyCarousel() {
 
   const leftArrow = document.querySelector('.journey-arrow.left');
   const rightArrow = document.querySelector('.journey-arrow.right');
+  const progressDots = document.querySelectorAll('.progress-dot');
 
   // Calculate scroll amount based on card width and gap
   function getCardScrollAmount() {
     const style = window.getComputedStyle(grid);
     const gap = parseInt(style.gap) || 0;
     return card.offsetWidth + gap;
+  }
+
+  // Update progress dots based on scroll position
+  function updateProgressDots() {
+    const scrollLeft = grid.scrollLeft;
+    const cardWidth = getCardScrollAmount();
+    const currentStep = Math.round(scrollLeft / cardWidth);
+    
+    progressDots.forEach((dot, index) => {
+      if (index === currentStep) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
   }
 
   // Add click event listeners for navigation arrows
@@ -46,6 +62,23 @@ function initializeJourneyCarousel() {
       });
     });
   }
+
+  // Add click event listeners for progress dots
+  progressDots.forEach((dot, index) => {
+    dot.addEventListener('click', function() {
+      const targetScroll = index * getCardScrollAmount();
+      grid.scrollTo({
+        left: targetScroll,
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Update dots on scroll
+  grid.addEventListener('scroll', updateProgressDots);
+  
+  // Initial update
+  updateProgressDots();
 }
 
 // ===== MOBILE MENU FUNCTIONALITY =====
