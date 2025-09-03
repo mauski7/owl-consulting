@@ -18,8 +18,6 @@ function initializeJourneyCarousel() {
   const card = grid.querySelector('.journey-step, .journey-card');
   if (!card) return;
 
-  const leftArrow = document.querySelector('.journey-arrow.left');
-  const rightArrow = document.querySelector('.journey-arrow.right');
   const progressDots = document.querySelectorAll('.progress-dot');
 
   // Calculate scroll amount based on card width and gap
@@ -41,25 +39,6 @@ function initializeJourneyCarousel() {
       } else {
         dot.classList.remove('active');
       }
-    });
-  }
-
-  // Add click event listeners for navigation arrows
-  if (leftArrow) {
-    leftArrow.addEventListener('click', function() {
-      grid.scrollBy({ 
-        left: -getCardScrollAmount(), 
-        behavior: 'smooth' 
-      });
-    });
-  }
-
-  if (rightArrow) {
-    rightArrow.addEventListener('click', function() {
-      grid.scrollBy({ 
-        left: getCardScrollAmount(), 
-        behavior: 'smooth' 
-      });
     });
   }
 

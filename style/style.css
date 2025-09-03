@@ -549,7 +549,6 @@ section {
 
 /* ===== FOUNDER JOURNEY SECTION ===== */
 .journey-carousel-wrapper {
-  position: relative;
   width: 100%;
   min-height: 0px;
   display: flex;
@@ -588,14 +587,14 @@ section {
   align-items: center;
   justify-content: flex-start;
   transition: all var(--dur-slow) var(--easing);
-  min-width: 260px;
-  max-width: 320px;
-  aspect-ratio: 3/4;
+  min-width: 360px;
+  max-width: 420px;
+  aspect-ratio: 4/3;
   height: auto;
-  min-height: 320px;
-  max-height: 420px;
+  min-height: 270px;
+  max-height: 315px;
   box-sizing: border-box;
-  flex: 0 0 260px;
+  flex: 0 0 360px;
   scroll-snap-align: start;
   overflow: hidden;
   border: 1px solid transparent;
@@ -664,40 +663,7 @@ section {
   max-width: 100%;
 }
 
-/* Journey Navigation Arrows */
-.journey-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--clr-blue);
-  color: var(--clr-white);
-  border: none;
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  cursor: pointer;
-  z-index: 10;
-  font-size: var(--fs-2xl);
-  opacity: 0.85;
-  transition: background var(--dur-slow) var(--easing), opacity var(--dur-slow) var(--easing);
-}
 
-.journey-arrow.left {
-  left: 0.5rem;
-}
-
-.journey-arrow.right {
-  right: 0.5rem;
-}
-
-.journey-arrow:hover {
-  background: var(--clr-gray);
-  opacity: 1;
-}
 
 /* Journey Progress Dots */
 .journey-progress-dots {
@@ -925,14 +891,14 @@ section {
   align-items: center;
   justify-content: flex-start;
   transition: all var(--dur-slow) var(--easing);
-  min-width: 260px;
-  max-width: 320px;
-  aspect-ratio: 3/4;
+  min-width: 360px;
+  max-width: 420px;
+  aspect-ratio: 4/3;
   height: auto;
-  min-height: 320px;
-  max-height: 420px;
+  min-height: 270px;
+  max-height: 315px;
   box-sizing: border-box;
-  flex: 0 0 260px;
+  flex: 0 0 360px;
   scroll-snap-align: start;
   overflow: hidden;
   border: 1px solid transparent;
