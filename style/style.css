@@ -643,7 +643,7 @@ section {
 
 .checklist-item {
   padding: var(--space-8);
-  padding-left: 80px;
+  padding-left: 100px;
   background: white;
   border-radius: var(--radius-2xl);
   border: 2px solid transparent;
@@ -2328,7 +2328,7 @@ section {
 
   .checklist-item {
     padding: var(--space-6);
-    padding-left: 70px;
+    padding-left: 80px;
   }
 
   .checklist-item::before {
