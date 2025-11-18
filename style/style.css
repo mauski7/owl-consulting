@@ -890,7 +890,7 @@ section {
 
 .metrics-card {
   text-align: center;
-  padding: var(--space-6);
+  padding: var(--space-6) var(--space-8);
   background: rgba(126, 182, 255, 0.12);
   backdrop-filter: blur(10px);
   border-radius: var(--radius-2xl);
@@ -903,6 +903,7 @@ section {
   justify-content: center;
   aspect-ratio: 1 / 1;
   width: 100%;
+  box-sizing: border-box;
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
 }
 
