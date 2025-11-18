@@ -911,69 +911,94 @@ section {
   margin-bottom: var(--space-12);
 }
 
-/* New Services Grid */
-.services-grid-new {
+/* Service Row Headers */
+.service-row-header {
+  text-align: center;
+  margin: var(--space-12) 0 var(--space-6);
+}
+
+.service-row-header h3 {
+  color: var(--clr-navy);
+  font-size: var(--fs-3xl);
+  margin-bottom: var(--space-2);
+}
+
+.service-row-header p {
+  color: var(--clr-gray-dark);
+  font-size: var(--fs-lg);
+}
+
+/* Services Grid - Flip Cards */
+.services-grid-flip {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-8);
-  margin: var(--space-10) 0;
+  margin: var(--space-6) 0 var(--space-12);
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* New Service Card Styles */
-.service-card-new {
+/* Flip Card Container */
+.flip-card-service {
+  perspective: 1000px;
+  height: 400px;
+  cursor: pointer;
+  position: relative;
+}
+
+.flip-card-inner-service {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-service:hover .flip-card-inner-service,
+.flip-card-service:focus .flip-card-inner-service,
+.flip-card-service.flipped .flip-card-inner-service {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front-service,
+.flip-card-back-service {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.service-card-flip {
   background: var(--clr-white);
   border-radius: var(--radius-2xl);
   padding: var(--space-8);
   box-shadow: var(--shadow-lg);
-  transition: all var(--transition-slow);
   border: 2px solid transparent;
   display: flex;
   flex-direction: column;
-  position: relative;
-  overflow: visible;
+  justify-content: space-between;
+  transition: all var(--transition-base);
 }
 
-.service-card-new::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--gradient-primary);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--transition-slow);
-  border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+.flip-card-front-service {
+  z-index: 2;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.service-card-new:hover::before {
-  transform: scaleX(1);
+.flip-card-back-service {
+  transform: rotateY(180deg);
+  overflow-y: auto;
 }
 
-.service-card-new:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-2xl);
-  border-color: var(--clr-blue);
-}
-
-.service-card-new h3 {
+.service-card-flip h3 {
   color: var(--clr-navy);
-  margin-bottom: var(--space-4);
   font-size: var(--fs-2xl);
+  margin-bottom: var(--space-4);
   font-weight: 700;
-  line-height: 1.3;
-}
-
-.service-subtitle {
-  font-size: var(--fs-base);
-  font-weight: 500;
-  color: var(--clr-gray-dark);
-  display: block;
-  margin-top: var(--space-2);
 }
 
 .service-timeline,
@@ -987,56 +1012,50 @@ section {
 .service-includes-header {
   color: var(--clr-navy);
   font-weight: 600;
-  font-size: var(--fs-base);
-  margin: var(--space-4) 0 var(--space-2);
+  font-size: var(--fs-sm);
+  margin: var(--space-3) 0 var(--space-2);
 }
 
-.service-includes {
+.service-includes-flip {
   list-style: none;
   padding: 0;
-  margin: var(--space-4) 0;
-  flex-grow: 1;
+  margin: var(--space-3) 0;
 }
 
-.service-includes li {
+.service-includes-flip li {
   padding: var(--space-2) 0 var(--space-2) var(--space-6);
   color: var(--clr-gray-dark);
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-2);
   font-size: var(--fs-sm);
   line-height: 1.5;
   position: relative;
 }
 
-.service-includes li::before {
+.service-includes-flip li::before {
   content: '✓';
   position: absolute;
   left: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   background: var(--gradient-primary);
   color: white;
   border-radius: 50%;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
-  flex-shrink: 0;
 }
 
-.service-note,
-.service-description {
-  font-size: var(--fs-sm);
+.flip-hint {
   color: var(--clr-blue-dark);
-  font-style: italic;
-  margin: var(--space-4) 0;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  margin-top: var(--space-4);
 }
 
 /* Featured and Special Badges */
-.service-card-new.featured,
-.service-card-new.special {
+.flip-card-service.featured,
+.flip-card-service.special {
   border-color: var(--clr-blue);
 }
 
@@ -2962,17 +2981,30 @@ a:focus-visible {
     font-size: var(--fs-base);
   }
 
-  /* New Services Grid */
-  .services-grid-new {
+  /* Service Row Headers */
+  .service-row-header h3 {
+    font-size: var(--fs-2xl);
+  }
+
+  .service-row-header p {
+    font-size: var(--fs-base);
+  }
+
+  /* Flip Services Grid - Stack on mobile */
+  .services-grid-flip {
     grid-template-columns: 1fr;
     gap: var(--space-6);
   }
 
-  .service-card-new {
+  .flip-card-service {
+    height: 380px;
+  }
+
+  .service-card-flip {
     padding: var(--space-6);
   }
 
-  .service-card-new h3 {
+  .service-card-flip h3 {
     font-size: var(--fs-xl);
   }
 
@@ -2997,11 +3029,19 @@ a:focus-visible {
     margin-bottom: var(--space-2);
   }
 
-  .service-card-new h3 {
+  .flip-card-service {
+    height: 360px;
+  }
+
+  .service-card-flip {
+    padding: var(--space-5);
+  }
+
+  .service-card-flip h3 {
     font-size: var(--fs-lg);
   }
 
-  .service-includes li {
+  .service-includes-flip li {
     font-size: var(--fs-xs);
   }
 }

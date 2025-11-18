@@ -379,7 +379,7 @@ function initializeMetricsCounters() {
 
 // ===== FLIP CARDS FUNCTIONALITY (Mobile Tap Support) =====
 function initializeFlipCards() {
-  const flipCards = document.querySelectorAll('.flip-card');
+  const flipCards = document.querySelectorAll('.flip-card, .flip-card-service');
 
   if (!flipCards.length) return;
 
