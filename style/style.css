@@ -870,15 +870,6 @@ section {
   padding: var(--space-16) 0;
 }
 
-.metrics-row .section-header {
-  margin-bottom: var(--space-12);
-  text-align: center;
-}
-
-.metrics-row .section-header h2 {
-  color: var(--clr-navy);
-}
-
 .metrics-cards-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -891,7 +882,7 @@ section {
 .metrics-card {
   text-align: center;
   padding: var(--space-8);
-  background: white;
+  background: var(--clr-light);
   border-radius: var(--radius-2xl);
   border: 2px solid transparent;
   transition: all var(--transition-slow);
@@ -902,12 +893,13 @@ section {
   justify-content: center;
   min-height: 240px;
   width: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .metrics-card:hover {
+  background: white;
   transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 12px 24px rgba(59, 130, 246, 0.15);
   border-color: var(--clr-blue);
 }
 
