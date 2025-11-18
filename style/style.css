@@ -2359,7 +2359,6 @@ a:focus-visible {
   justify-content: center;
   background: var(--gradient-dark);
   padding: var(--space-16) var(--space-6);
-  padding-top: calc(var(--space-16) + 80px);
 }
 
 .confirmation-container {
@@ -2522,7 +2521,6 @@ a:focus-visible {
 @media (max-width: 768px) {
   .confirmation-page {
     padding: var(--space-12) var(--space-4);
-    padding-top: calc(var(--space-12) + 80px);
   }
 
   .confirmation-container {
