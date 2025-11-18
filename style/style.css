@@ -990,7 +990,6 @@ section {
   text-align: center;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .flip-card-front-service .service-card-flip {
@@ -1080,8 +1079,6 @@ section {
   font-size: var(--fs-sm);
   font-weight: 600;
   margin-top: var(--space-4);
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 /* Featured and Special Badges */
