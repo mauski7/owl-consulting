@@ -980,13 +980,20 @@ section {
   flex-direction: column;
   justify-content: space-between;
   transition: all var(--transition-base);
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .flip-card-front-service {
   z-index: 2;
+  display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+
+.flip-card-front-service .service-card-flip {
+  justify-content: center;
 }
 
 .flip-card-back-service {
@@ -1073,10 +1080,16 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   box-shadow: var(--shadow-md);
+  z-index: 10;
 }
 
 .special-badge {
   background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+}
+
+.flip-card-service.featured .service-card-flip,
+.flip-card-service.special .service-card-flip {
+  border-color: var(--clr-blue);
 }
 
 /* Service Comparison Box */
