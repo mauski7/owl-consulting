@@ -1694,7 +1694,7 @@ section {
 
 /* ===== ABOUT SECTION ===== */
 .about {
-  background: var(--gradient-primary) !important;
+  background: var(--gradient-dark) !important;
   padding: var(--space-16) 0;
 }
 
