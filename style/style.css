@@ -2476,8 +2476,11 @@ a:focus-visible {
 
 .confirmation-cta-buttons .cta-primary {
   flex: 1;
-  min-width: 200px;
+  min-width: 180px;
   justify-content: center;
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--fs-base);
+  font-weight: 600;
 }
 
 .confirmation-footer-note {
