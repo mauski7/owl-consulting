@@ -1694,7 +1694,7 @@ section {
 
 /* ===== ABOUT SECTION ===== */
 .about {
-  background: var(--clr-light) !important;
+  background: var(--gradient-primary) !important;
   padding: var(--space-16) 0;
 }
 
@@ -1704,7 +1704,7 @@ section {
 
 .about .section-header h2,
 .about .section-header p {
-  color: var(--clr-navy);
+  color: var(--clr-white);
 }
 
 .about-grid {
@@ -1718,13 +1718,13 @@ section {
 }
 
 .about-content h4 {
-  color: var(--clr-navy);
+  color: var(--clr-white);
   margin-top: var(--space-6);
   margin-bottom: var(--space-3);
 }
 
 .about-content p {
-  color: var(--clr-gray-dark);
+  color: var(--clr-white);
   line-height: 1.8;
   margin-bottom: var(--space-6);
 }
@@ -1759,7 +1759,7 @@ section {
 
 /* ===== TESTIMONIAL SECTION ===== */
 .testimonial-section {
-  background: var(--gradient-dark) !important;
+  background: var(--clr-white) !important;
   padding: var(--space-16) 0;
 }
 
@@ -1768,7 +1768,7 @@ section {
 }
 
 .testimonial-section .section-header h2 {
-  color: var(--clr-white);
+  color: var(--clr-navy);
 }
 
 .testimonial-quote {
@@ -1802,7 +1802,7 @@ section {
 .client-name {
   font-size: var(--fs-lg);
   font-weight: 600;
-  color: var(--clr-white);
+  color: var(--clr-navy);
 }
 
 .testimonial-client a {
