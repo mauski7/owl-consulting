@@ -2364,14 +2364,11 @@ a:focus-visible {
 
 .confirmation-container {
   max-width: 700px;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(40px) saturate(180%);
-  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  background: white;
   border-radius: var(--radius-2xl);
   padding: var(--space-10);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
-              inset 0 0 0 1px rgba(255, 255, 255, 0.18);
-  border: 2px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 2px solid rgba(255, 255, 255, 0.95);
   position: relative;
 }
 
@@ -2397,43 +2394,39 @@ a:focus-visible {
 
 .confirmation-title {
   text-align: center;
-  color: var(--clr-white);
+  color: var(--clr-navy);
   margin-bottom: var(--space-3);
   font-size: clamp(var(--fs-3xl), 5vw, var(--fs-5xl));
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: none;
 }
 
 .confirmation-subtitle {
   text-align: center;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--clr-gray-dark);
   font-size: var(--fs-xl);
   margin-bottom: var(--space-8);
   font-weight: 500;
 }
 
 .confirmation-section {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(126, 182, 255, 0.05);
   border-radius: var(--radius-xl);
   padding: var(--space-6);
   margin-bottom: var(--space-6);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(126, 182, 255, 0.15);
   transition: all var(--transition-base);
-  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.15);
 }
 
 .confirmation-section:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.35);
-  box-shadow: 0 6px 20px 0 rgba(31, 38, 135, 0.25);
+  background: rgba(126, 182, 255, 0.08);
+  border-color: rgba(126, 182, 255, 0.25);
 }
 
 .confirmation-section h2 {
-  color: var(--clr-white);
+  color: var(--clr-navy);
   font-size: var(--fs-2xl);
   margin-bottom: var(--space-4);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: none;
 }
 
 .confirmation-checklist {
@@ -2445,7 +2438,7 @@ a:focus-visible {
 .confirmation-checklist li {
   padding: var(--space-3) 0 var(--space-3) var(--space-8);
   position: relative;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--clr-gray-dark);
   line-height: 1.6;
   font-size: var(--fs-base);
 }
@@ -2454,14 +2447,13 @@ a:focus-visible {
   content: "→";
   position: absolute;
   left: 0;
-  color: var(--clr-blue);
+  color: var(--clr-blue-dark);
   font-weight: 700;
   font-size: var(--fs-xl);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .confirmation-about p {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--clr-gray-dark);
   line-height: 1.8;
   margin: 0;
   font-size: var(--fs-base);
@@ -2487,21 +2479,21 @@ a:focus-visible {
   text-align: center;
   margin-top: var(--space-8);
   padding-top: var(--space-6);
-  border-top: 2px solid rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.85);
+  border-top: 2px solid rgba(126, 182, 255, 0.2);
+  color: var(--clr-gray-dark);
   font-size: var(--fs-base);
   line-height: 1.8;
 }
 
 .confirmation-footer-note a {
-  color: var(--clr-blue);
+  color: var(--clr-blue-dark);
   font-weight: 600;
   text-decoration: none;
   transition: color var(--transition-base);
 }
 
 .confirmation-footer-note a:hover {
-  color: var(--clr-white);
+  color: var(--clr-navy);
   text-decoration: underline;
 }
 
@@ -2511,7 +2503,7 @@ a:focus-visible {
 }
 
 .confirmation-back-link a {
-  color: var(--clr-blue);
+  color: var(--clr-blue-dark);
   font-weight: 600;
   text-decoration: none;
   font-size: var(--fs-base);
@@ -2522,7 +2514,7 @@ a:focus-visible {
 }
 
 .confirmation-back-link a:hover {
-  color: var(--clr-white);
+  color: var(--clr-navy);
   transform: translateX(-4px);
 }
 
