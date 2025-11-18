@@ -865,8 +865,8 @@ section {
 
 /* ===== METRICS SECTION ===== */
 .metrics-row {
-  background: var(--clr-navy);
-  color: var(--clr-white);
+  background: var(--clr-white);
+  color: var(--clr-navy);
   padding: var(--space-16) 0;
 }
 
@@ -882,10 +882,9 @@ section {
 .metrics-card {
   text-align: center;
   padding: var(--space-8);
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(30px);
+  background: var(--clr-light);
   border-radius: var(--radius-2xl);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid transparent;
   transition: all var(--transition-slow);
   position: relative;
   display: flex;
@@ -894,13 +893,14 @@ section {
   justify-content: center;
   min-height: 240px;
   width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .metrics-card:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: white;
   transform: translateY(-8px);
-  box-shadow: var(--shadow-2xl);
-  border-color: rgba(126, 182, 255, 0.4);
+  box-shadow: 0 12px 24px rgba(59, 130, 246, 0.15);
+  border-color: var(--clr-blue);
 }
 
 .metrics-icon {
@@ -920,7 +920,7 @@ section {
 .metrics-value {
   font-size: var(--fs-3xl);
   font-weight: 800;
-  color: var(--clr-white);
+  color: var(--clr-navy);
   margin-bottom: var(--space-3);
   line-height: 1.2;
   font-family: 'Montserrat', sans-serif;
@@ -930,7 +930,7 @@ section {
 
 .metrics-label {
   font-size: var(--fs-sm);
-  color: var(--clr-blue);
+  color: var(--clr-gray-dark);
   font-weight: 400;
   line-height: 1.4;
   text-align: center;
@@ -943,6 +943,11 @@ section {
   padding: var(--space-16) 0;
 }
 
+.services.gradient-bg .section-header h2,
+.services.gradient-bg .section-header p {
+  color: var(--clr-white);
+}
+
 .services .section-header {
   margin-bottom: var(--space-12);
 }
@@ -951,6 +956,11 @@ section {
 .service-row-header {
   text-align: center;
   margin: var(--space-12) 0 var(--space-6);
+}
+
+.services.gradient-bg .service-row-header h3,
+.services.gradient-bg .service-row-header p {
+  color: var(--clr-white);
 }
 
 .service-row-header h3 {
