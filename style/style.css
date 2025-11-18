@@ -945,6 +945,7 @@ section {
   height: 400px;
   cursor: pointer;
   position: relative;
+  overflow: hidden;
 }
 
 .flip-card-inner-service {
@@ -990,11 +991,17 @@ section {
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+
+.flip-card-front-service.service-card-flip {
+  justify-content: center;
   overflow: hidden;
 }
 
-.flip-card-front-service .service-card-flip {
-  justify-content: center;
+.flip-card-front-service.service-card-flip > * {
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .flip-card-back-service {
