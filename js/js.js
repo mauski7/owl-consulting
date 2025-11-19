@@ -377,13 +377,23 @@ function initializeMetricsCounters() {
   observer.observe(metricsSection);
 }
 
-// ===== FLIP CARDS FUNCTIONALITY (Mobile Tap Support) =====
+// ===== FLIP CARDS FUNCTIONALITY (Modal on Desktop, Simple Flip on Mobile) =====
 function initializeFlipCards() {
   const flipCards = document.querySelectorAll('.flip-card, .flip-card-service');
+  const serviceCards = document.querySelectorAll('.flip-card-service');
+  const modalOverlay = document.getElementById('serviceModalOverlay');
 
   if (!flipCards.length) return;
 
-  flipCards.forEach(card => {
+  // Check if desktop (>768px)
+  function isDesktop() {
+    return window.innerWidth > 768;
+  }
+
+  // Service card click handlers (modal on desktop)
+  serviceCards.forEach(card => {
+    const closeBtn = card.querySelector('.modal-close-btn');
+
     // Add click handler to the card
     card.addEventListener('click', function(e) {
       // If clicking on a link, let it navigate
@@ -391,30 +401,81 @@ function initializeFlipCards() {
         return;
       }
 
-      // Stop event from bubbling to document
-      e.stopPropagation();
-
-      // Toggle this card
-      toggleFlipCard(this, flipCards);
-    });
-
-    // Add keyboard handler for Enter and Space keys
-    card.addEventListener('keydown', function(e) {
-      // If pressing on a link, let it navigate
-      if (e.target.tagName === 'A' || e.target.closest('a')) {
+      // If clicking close button, close modal
+      if (e.target.classList.contains('modal-close-btn')) {
+        e.stopPropagation();
+        closeModal(this);
         return;
       }
 
-      // Check for Enter or Space key
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        e.stopPropagation();
-        toggleFlipCard(this, flipCards);
+      // Stop event from bubbling
+      e.stopPropagation();
+
+      // Toggle card - modal on desktop, flip on mobile
+      if (isDesktop()) {
+        openModal(this, serviceCards);
+      } else {
+        toggleFlipCard(this, serviceCards);
       }
+    });
+
+    // Close button handler
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        closeModal(card);
+      });
+    }
+  });
+
+  // Regular flip cards (non-service cards)
+  const regularFlipCards = document.querySelectorAll('.flip-card:not(.flip-card-service)');
+  regularFlipCards.forEach(card => {
+    card.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A' || e.target.closest('a')) return;
+      e.stopPropagation();
+      toggleFlipCard(this, regularFlipCards);
     });
   });
 
-  // Helper function to toggle flip card state
+  // Open modal (desktop only)
+  function openModal(card, allCards) {
+    // Close all other modals first
+    allCards.forEach(otherCard => {
+      if (otherCard !== card) {
+        otherCard.classList.remove('flipped', 'modal-active');
+        otherCard.setAttribute('aria-pressed', 'false');
+      }
+    });
+
+    // Open this modal
+    card.classList.add('flipped', 'modal-active');
+    card.setAttribute('aria-pressed', 'true');
+
+    // Show overlay
+    if (modalOverlay) {
+      modalOverlay.classList.add('active');
+    }
+
+    // Prevent body scroll
+    document.body.style.overflow = 'hidden';
+  }
+
+  // Close modal
+  function closeModal(card) {
+    card.classList.remove('flipped', 'modal-active');
+    card.setAttribute('aria-pressed', 'false');
+
+    // Hide overlay
+    if (modalOverlay) {
+      modalOverlay.classList.remove('active');
+    }
+
+    // Restore body scroll
+    document.body.style.overflow = '';
+  }
+
+  // Simple flip toggle (mobile or non-service cards)
   function toggleFlipCard(card, allCards) {
     const isCurrentlyFlipped = card.classList.contains('flipped');
 
@@ -436,11 +497,28 @@ function initializeFlipCards() {
     }
   }
 
-  // Close all flipped cards when clicking outside
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.flip-card')) {
-      flipCards.forEach(card => {
-        card.classList.remove('flipped');
+  // Close modal when clicking overlay
+  if (modalOverlay) {
+    modalOverlay.addEventListener('click', function() {
+      serviceCards.forEach(card => closeModal(card));
+    });
+  }
+
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      serviceCards.forEach(card => closeModal(card));
+    }
+  });
+
+  // Handle window resize
+  window.addEventListener('resize', function() {
+    // If resizing to mobile, close any open modals
+    if (!isDesktop()) {
+      serviceCards.forEach(card => {
+        if (card.classList.contains('modal-active')) {
+          closeModal(card);
+        }
       });
     }
   });
