@@ -1084,8 +1084,6 @@ section {
   transform: scale(1.1);
 }
 
-.flip-card-service:hover .flip-card-inner-service,
-.flip-card-service:focus .flip-card-inner-service,
 .flip-card-service.flipped .flip-card-inner-service {
   transform: rotateY(180deg);
 }
