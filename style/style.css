@@ -380,7 +380,7 @@ section {
 .hero-subtitle {
   font-size: clamp(var(--fs-xl), 3vw, var(--fs-3xl));
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-8);
   font-weight: 400;
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
