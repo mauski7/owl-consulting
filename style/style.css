@@ -2424,14 +2424,14 @@ section {
 
   .checklist-item {
     padding: var(--space-6);
-    padding-left: 70px;
+    padding-left: 76px;
   }
 
   .checklist-item::before {
-    width: 44px;
-    height: 44px;
-    font-size: 24px;
-    left: var(--space-3);
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    left: var(--space-4);
   }
 
   .checklist-item p {
