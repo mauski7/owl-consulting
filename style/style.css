@@ -1860,13 +1860,18 @@ section {
   margin-bottom: 0;
 }
 
+.about-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .about-visual img {
   width: 100%;
   max-width: 400px;
   border-radius: var(--radius-2xl);
   box-shadow: var(--shadow-2xl);
   display: block;
-  margin: 0 auto;
 }
 
 .about-linkedin {

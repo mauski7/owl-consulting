@@ -326,7 +326,7 @@ function initializeMetricsCounters() {
   }
 
   // Animate a single counter
-  function animateCounter(element, target, suffix) {
+  function animateCounter(element, target, suffix, prefix = '') {
     const duration = 2000; // 2 seconds
     const steps = 60;
     const increment = target / steps;
@@ -339,7 +339,7 @@ function initializeMetricsCounters() {
         current = target;
         clearInterval(timer);
       }
-      element.textContent = Math.floor(current) + suffix;
+      element.textContent = prefix + Math.floor(current) + suffix;
     }, stepDuration);
   }
 
@@ -354,14 +354,19 @@ function initializeMetricsCounters() {
 
       if (number === null) return; // Skip non-numeric or range values
 
-      // Determine the suffix (everything after the number)
+      // Determine the prefix and suffix
+      let prefix = '';
       let suffix = '';
+
+      if (originalText.startsWith('$')) prefix = '$';
+
       if (originalText.includes('%')) suffix = '%';
       else if (originalText.toLowerCase().includes('years')) suffix = '+ Years';
       else if (originalText.toLowerCase().includes('areas')) suffix = ' Core Areas';
+      else if (originalText.includes('K+')) suffix = 'K+';
 
       // Start animation
-      animateCounter(counter, number, suffix);
+      animateCounter(counter, number, suffix, prefix);
     });
   }
 
