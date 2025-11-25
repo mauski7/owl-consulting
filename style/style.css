@@ -2424,15 +2424,15 @@ section {
 
   .checklist-item {
     padding: var(--space-6);
-    padding-top: calc(var(--space-6) + 8px);
+    padding-top: calc(var(--space-6) + 4px);
   }
 
   .checklist-item::before {
     width: 40px;
     height: 40px;
     font-size: 20px;
-    left: var(--space-4);
-    top: -8px;
+    left: var(--space-3);
+    top: -16px;
     transform: none;
   }
 
