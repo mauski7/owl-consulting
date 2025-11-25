@@ -2424,14 +2424,14 @@ section {
 
   .checklist-item {
     padding: var(--space-6);
-    padding-left: 80px;
+    padding-left: 70px;
   }
 
   .checklist-item::before {
     width: 44px;
     height: 44px;
     font-size: 24px;
-    left: var(--space-4);
+    left: var(--space-3);
   }
 
   .checklist-item p {
@@ -3190,7 +3190,13 @@ a:focus-visible {
   }
 
   .flip-card-service {
-    height: 380px;
+    height: auto;
+    min-height: 380px;
+  }
+
+  .flip-card-service.flipped {
+    height: auto;
+    min-height: 500px;
   }
 
   /* Disable modal on mobile */
@@ -3201,10 +3207,14 @@ a:focus-visible {
     transform: none !important;
     width: 100% !important;
     max-width: none !important;
-    height: 380px !important;
-    min-height: auto !important;
+    height: auto !important;
+    min-height: 500px !important;
     max-height: none !important;
     z-index: auto !important;
+  }
+
+  .flip-card-inner-service {
+    height: 100%;
   }
 
   .service-modal-overlay.active {
@@ -3241,7 +3251,13 @@ a:focus-visible {
   }
 
   .flip-card-service {
-    height: 360px;
+    height: auto;
+    min-height: 360px;
+  }
+
+  .flip-card-service.flipped {
+    height: auto;
+    min-height: 480px;
   }
 
   .service-card-flip {
